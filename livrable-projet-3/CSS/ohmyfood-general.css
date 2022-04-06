@@ -1,0 +1,66 @@
+/************************************ OHMYFOOD **********************************************
+*************** *****proprietes communes aux pages OHMYFOOD ***********************
+*******************************************************************************************/
+
+
+/*** reset personnel de la page *****/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-font-defaut);
+}
+
+/**** proprietés personnalisées  *******/
+
+:root{
+
+    /*** couleur du theme ***/
+    --primaire-color: #9356DC;
+    --secondaire-color: #FF79DA;
+    --tertiaire-color: #99E2D0;
+
+    --font-color-defaut : black;
+
+    --background-color-map: rgba(117, 116, 116, 0.418);
+    --background-color-main: rgba(117, 116, 116, 0.25);
+    --background-color-white: #FFFFFF;
+    --background-color-footer: rgba(0, 0, 0, 0.8);
+    
+    
+
+    /*** breakpoint pour le responsive ***/
+    --breakpoint-hight : 992px;
+    --breakpoint-low: 768px;
+
+
+}
+
+/*** conteneur global de la page  ***/
+
+.container-global-sheet{
+    width: 100%;
+        
+}
+
+/**** concerne les balises titres <h1> ***/
+
+.title-h1{
+
+    font-size: 22px;
+    font-weight:900;
+   
+    
+}
+
+.color-white{
+    color: white;
+}
+
+.text-center{
+    text-align: center;
+}

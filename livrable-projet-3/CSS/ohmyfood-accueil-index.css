@@ -1,0 +1,255 @@
+/**************************************************************************
+********concerne le style de la page ohmyfood-accueil-index.html **********
+**************************************************************************/
+
+/***** concerne la search-bar ******/
+
+.container-search-bar{
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color-map);
+    box-shadow: 0px -2px 2px 0px rgba( 0, 0, 0, 0.5);
+
+}
+
+.map-search-input{
+    flex: 0 0 auto;
+    padding: 10px 0px;
+    border: none;
+    text-align: center;
+    background-color: transparent;
+    
+}
+
+.container-icon-search{
+    width:20px;
+    height: 20px;
+    position: relative;
+    left: 30px;
+}
+
+/**** container presentation *****/
+.presentation{
+
+    padding: 30px 20px 50px 20px;
+    background-color: var(--background-color-main);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-h1{
+
+    font-size: 25px;
+}
+
+.text-presentation{
+    
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+.button-explorer{
+
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+
+    background: linear-gradient(-10deg, var(--primaire-color) 10%, var(--secondaire-color) 100% ) ;
+    box-shadow: 0px 2px 2px 0px rgba( 0, 0, 0, 0.5) ;
+}
+
+.button-explorer:hover{
+    opacity: 0.8;
+    box-shadow: 0px 2px 2px 2px rgba( 0, 0, 0, 0.7);
+}
+
+/***** concerne le aside "Fonctionnement" ****/
+.aside{
+    padding: 50px 10px 50px 20px;
+}
+
+.aside-title{
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.etape-reservation{
+    display:flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.etape-reservation-li{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    width:100%;
+
+    padding: 25px 25px 25px 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    background-color: var(--background-color-main);
+    margin-top: 20px; 
+}
+
+.etape-reservation-li:hover .color-hover{
+
+    color: var(--primaire-color);
+}
+
+
+
+.etape-number{
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--primaire-color);
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+
+    position: relative;
+    left: -10px
+   
+}
+
+.etape-color-icon{
+    color: gray;
+}
+
+.etape-size-icon{
+    height: 20px;
+    width: 20px;
+}
+
+.etape-text{
+    margin-left: 10px;
+}
+
+/************ concerne la section restaurant ***********/
+
+.restaurant{
+    
+    padding: 50px 20px 50px 20px;
+    background-color: var(--background-color-main);
+}
+
+.container-card{
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.card{
+
+    position:relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+
+    box-shadow: 2px 2px 2px 2px var(--background-color-main);
+    border-radius: 20px;
+    margin: 10px 0px;
+
+    border: 2px solid green;
+    
+
+    
+}
+
+.nouveau{
+    padding: 10px;
+    background-color: var(--tertiaire-color);
+    color: rgb(19,126,98);
+    font-weight: 700;
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.card-container-img{
+    
+    overflow: hidden;
+    width:100%;
+    flex: 1 0 75%;
+    border: 2px solid red;
+
+}
+
+.card-img{
+   object-fit:cover;
+   width:100%;
+   height: 100%;
+  
+    
+}
+
+
+.card-info{
+    flex: 1 1 25%;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--background-color-white);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 2px solid red;
+
+    
+
+}
+
+.card-info-text{
+
+    font-size: 18px;
+    text-align: left;
+
+}
+
+.text-bold{
+    font-weight: 700;
+}
+
+.card-icon-heart{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 40px;
+
+}
+
+
+
+

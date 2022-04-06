@@ -1,0 +1,19 @@
+.menu{
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    
+}
+
+.menu-li{
+    width: 50%;
+    padding: 20px 0px;
+
+}
+
+.menu-logo{
+    width: 100%;
+    height: 100%;
+}
