@@ -26,16 +26,10 @@
     color: white;
 }
 
-/*.footer-menu-li-link-logo{
-    display: block;
-    margin-bottom: 10px;
-}*/
-
-.footer-svg{
-
+.footer-svg-logo{
     width: 100px;
-    height: 18px;
-    fill: white;
+    height: 30px;
+    fill: var(--background-color-white);
 }
 
 .size-icon{
