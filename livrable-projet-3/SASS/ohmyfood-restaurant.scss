@@ -1,0 +1,189 @@
+/*************************************************************************************
+***************** concerne la partie "main" des pages restaurant**********************
+**************************************************************************************/
+
+/************ screen < 768px*************
+****************************************/
+
+.main-container{
+
+    width:100%;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+        &__cont{
+
+            width: 100%;
+            height: 400px;
+
+            &__img{
+            
+                width:100%;
+                height:100%;
+                object-fit: cover;
+            }
+
+        }
+}
+
+.container-menu{
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+        &__cont{
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+            &__titre{
+                font-size: 30px;
+                font-family: "Shrikhand";
+
+            }
+
+            &__icon{
+                width:50px;
+                height: 50px;
+            }
+
+        }
+
+}
+
+.form{
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+$card-type : entree, plat, dessert;
+
+
+
+    @each $var in $card-type {
+        
+    
+        .card-#{$var}{
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width:500px;
+        
+
+        
+        
+
+        &__titre{
+            font-size: 20px;
+            text-transform: uppercase;
+
+        }
+
+        &__underline{
+            width:80px;
+            height: 0px;
+            border: 2px solid var(--tertiaire-color);
+
+        }
+
+        &__label{
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            width:100%;
+            height: 60px;
+            margin: 20px 0px;
+            border-radius: 10px;
+            background-color: var(--background-color-white);
+            border: 2px solid red;
+
+                &:hover{
+
+                    .card-#{$var}__label__valid{
+
+                        flex: 0 0 20%;
+                    }
+
+                }
+            
+
+            &__info{
+
+                flex: 1 0 80%;
+                position: relative;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                border: 2px solid green;
+
+                &__text{
+                    font-size: 16px;
+                    
+
+                    &--bold{
+                        font-weight: bold;
+                    }
+                
+                    
+                    &__price{
+                        position: absolute;
+                        bottom: 5px;
+                        right: 10px;
+                    }
+                }
+            }
+
+            &__valid{
+
+                flex:  0 0 0%;
+                height: 100%;
+                background-color: var(--tertiaire-color);
+                border: 4px solid blue;
+
+                
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+
+                transition: flex 0.3s ease-in-out ;
+
+                
+            }
+
+
+        }
+        
+
+        &__checkbox{
+                display: none;
+            }
+    }
+    
+}
+
+
+    
+
+
+
+
+

@@ -1,0 +1,282 @@
+/*************************************************************************************
+***************** concerne la partie "main" des pages restaurant**********************
+**************************************************************************************/
+/************ screen < 768px*************
+****************************************/
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-container__cont {
+  width: 100%;
+  height: 400px;
+}
+
+.main-container__cont__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-menu {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container-menu__cont {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-menu__cont__titre {
+  font-size: 30px;
+  font-family: "Shrikhand";
+}
+
+.container-menu__cont__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-entree {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 500px;
+}
+
+.card-entree__titre {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.card-entree__underline {
+  width: 80px;
+  height: 0px;
+  border: 2px solid var(--tertiaire-color);
+}
+
+.card-entree__label {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  margin: 20px 0px;
+  border-radius: 10px;
+  background-color: var(--background-color-white);
+  border: 2px solid red;
+}
+
+.card-entree__label:hover .card-entree__label__valid {
+  flex: 0 0 20%;
+}
+
+.card-entree__label__info {
+  flex: 1 0 80%;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 2px solid green;
+}
+
+.card-entree__label__info__text {
+  font-size: 16px;
+}
+
+.card-entree__label__info__text--bold {
+  font-weight: bold;
+}
+
+.card-entree__label__info__text__price {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.card-entree__label__valid {
+  flex: 0 0 0%;
+  height: 100%;
+  background-color: var(--tertiaire-color);
+  border: 4px solid blue;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: flex 0.3s ease-in-out;
+}
+
+.card-entree__checkbox {
+  display: none;
+}
+
+.card-plat {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 500px;
+}
+
+.card-plat__titre {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.card-plat__underline {
+  width: 80px;
+  height: 0px;
+  border: 2px solid var(--tertiaire-color);
+}
+
+.card-plat__label {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  margin: 20px 0px;
+  border-radius: 10px;
+  background-color: var(--background-color-white);
+  border: 2px solid red;
+}
+
+.card-plat__label:hover .card-plat__label__valid {
+  flex: 0 0 20%;
+}
+
+.card-plat__label__info {
+  flex: 1 0 80%;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 2px solid green;
+}
+
+.card-plat__label__info__text {
+  font-size: 16px;
+}
+
+.card-plat__label__info__text--bold {
+  font-weight: bold;
+}
+
+.card-plat__label__info__text__price {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.card-plat__label__valid {
+  flex: 0 0 0%;
+  height: 100%;
+  background-color: var(--tertiaire-color);
+  border: 4px solid blue;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: flex 0.3s ease-in-out;
+}
+
+.card-plat__checkbox {
+  display: none;
+}
+
+.card-dessert {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 500px;
+}
+
+.card-dessert__titre {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.card-dessert__underline {
+  width: 80px;
+  height: 0px;
+  border: 2px solid var(--tertiaire-color);
+}
+
+.card-dessert__label {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  margin: 20px 0px;
+  border-radius: 10px;
+  background-color: var(--background-color-white);
+  border: 2px solid red;
+}
+
+.card-dessert__label:hover .card-dessert__label__valid {
+  flex: 0 0 20%;
+}
+
+.card-dessert__label__info {
+  flex: 1 0 80%;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 2px solid green;
+}
+
+.card-dessert__label__info__text {
+  font-size: 16px;
+}
+
+.card-dessert__label__info__text--bold {
+  font-weight: bold;
+}
+
+.card-dessert__label__info__text__price {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.card-dessert__label__valid {
+  flex: 0 0 0%;
+  height: 100%;
+  background-color: var(--tertiaire-color);
+  border: 4px solid blue;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: flex 0.3s ease-in-out;
+}
+
+.card-dessert__checkbox {
+  display: none;
+}
