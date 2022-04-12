@@ -2,8 +2,9 @@
 ***************** concerne la partie "main" des pages restaurant**********************
 **************************************************************************************/
 
-/************ screen < 768px*************
-****************************************/
+/*************************mobil first **********************************************
+***********************screen < 768px*************************************************
+**************************************************************************************/
 
 .main-container{
 
@@ -14,23 +15,123 @@
     justify-content: flex-start;
     align-items: center;
 
-        &__cont{
+    /************ 768px < screen < 992px*************
+    ************************************************/
 
-            width: 100%;
-            height: 400px;
 
-            &__img{
-            
-                width:100%;
-                height:100%;
-                object-fit: cover;
-            }
+    /************ screen > 992px*************
+    ****************************************/
 
-        }
+
 }
 
-.container-menu{
+/******* conteneur de l' image de presentation du restaurant******/
+/************** screen < 768px ********************************/
+.restaurant{
 
+    width: 100%;
+    height: 400px;
+
+    &__img{
+    
+        width:100%;
+        height:100%;
+        background-repeat: none;
+        background-size: cover;
+    }
+
+    /******* conteneur de l' image de presentation du restaurant**********/
+    /************** 768px < screen < 992px ********************************/
+
+
+
+    /******* conteneur de l' image de presentation du restaurant******/
+    /************** screen > 992px ********************************/
+}
+
+/*************** image de presentation à disposition ***********/
+
+
+/************** screen < 768px ********************************/
+#la-palette{
+    background-image: url("../IMAGES/restaurants/img-300px/la-palette-du-gout-300px.png");
+
+    /************** 768px < screen < 992px ********************************/
+    @media screen and (min-width: 768px) and (max-width:992px) {
+        
+        background-image: url("../IMAGES/restaurants/img-600px/la-palette-du-gout-600px.png");
+    }
+
+    /************** screen > 992px ********************************/
+    @media screen and (min-width: 992px) {
+        
+        background-image: url("../IMAGES/restaurants/img-900px/la-palette-du-gout-900px.png");
+    }
+
+
+}
+
+/************** screen < 768px ********************************/
+#le-delice{
+    background-image: url("../IMAGES/restaurants/img-300px/le-delice-des-sens-300px.png");
+
+    /************** 768px < screen < 992px ********************************/
+    @media screen and (min-width: 768px) and (max-width:992px) {
+        
+        background-image: url("../IMAGES/restaurants/img-600px/le-delice-des-sens-600px.png");
+    }
+
+    /************** screen > 992px ********************************/
+    @media screen and (min-width: 992px) {
+        
+        background-image: url("../IMAGES/restaurants/img-900px/le-delice-des-sens-900px.png");
+    }
+}
+
+/************** screen < 768px ********************************/
+#la-note{
+    background-image: url("../IMAGES/restaurants/img-300px/la-note-enchantee-300px.png");
+
+    /************** 768px < screen < 992px ********************************/
+    @media screen and (min-width: 768px) and (max-width:992px) {
+        
+        background-image: url("../IMAGES/restaurants/img-600px/la-note-enchantee-600px.png");
+    }
+
+    /************** screen > 992px ********************************/
+    @media screen and (min-width: 992px) {
+        
+        background-image: url("../IMAGES/restaurants/img-900px/la-note-enchantee-900px.png");
+    }
+}
+
+/************** screen < 768px ********************************/
+#la-francaise{
+    background-image: url("../IMAGES/restaurants/img-300px/a-la-francaise-300px.png");
+
+    /************** 768px < screen < 992px ********************************/
+    @media screen and (min-width: 768px) and (max-width:992px) {
+        
+        background-image: url("../IMAGES/restaurants/img-600px/a-la-francaise-600px.png");
+    }
+
+    /************** screen > 992px ********************************/
+    @media screen and (min-width: 992px) {
+        
+        background-image: url("../IMAGES/restaurants/img-600px/a-la-francaise-600px.png");
+    }
+}
+
+
+
+
+
+
+
+
+.container-menu{
+    width: 100%;
+    border: 2px solid green;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -58,124 +159,146 @@
 
 }
 
-.form{
+/****** conteneur qui contient les trois cartes (entree, plats, dessert) *****/
 
+.form{
+    width:100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
 }
 
+//****** creation des trois cartes contenant entree, plat desert *******/
 
-
+//*** liste contenant les selecteurs des trois cartes *****/
 $card-type : entree, plat, dessert;
 
 
-
+    //**** a chaque iteration de la boucle une carte est cree avec un selecteur specifique***/
     @each $var in $card-type {
         
-    
+        /*** carte-#{$var} ***/
         .card-#{$var}{
 
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width:500px;
-        
-
-        
-        
-
-        &__titre{
-            font-size: 20px;
-            text-transform: uppercase;
-
-        }
-
-        &__underline{
-            width:80px;
-            height: 0px;
-            border: 2px solid var(--tertiaire-color);
-
-        }
-
-        &__label{
-
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: column nowrap;
             justify-content: flex-start;
-            align-items: center;
-
+            align-items: flex-start;
             width:100%;
-            height: 60px;
-            margin: 20px 0px;
-            border-radius: 10px;
-            background-color: var(--background-color-white);
             border: 2px solid red;
 
-                &:hover{
+            /****** 768px < screen < 992px  ****/
+            @media screen and (min-width: 768px) and (max-width:992px) {
+                width: 50%;
+            }
 
-                    .card-#{$var}__label__valid{
+            /******** screen > 992px  ****/
+            @media screen and (min-width: 992px) {
+                width: 40%;
+            }
 
-                        flex: 0 0 20%;
-                    }
-
-                }
             
-
-            &__info{
-
-                flex: 1 0 80%;
-                position: relative;
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: flex-start;
-                align-items: flex-start;
-                border: 2px solid green;
-
-                &__text{
-                    font-size: 16px;
-                    
-
-                    &--bold{
-                        font-weight: bold;
-                    }
-                
-                    
-                    &__price{
-                        position: absolute;
-                        bottom: 5px;
-                        right: 10px;
-                    }
-                }
-            }
-
-            &__valid{
-
-                flex:  0 0 0%;
-                height: 100%;
-                background-color: var(--tertiaire-color);
-                border: 4px solid blue;
-
-                
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: center;
-                align-items: center;
-
-                transition: flex 0.3s ease-in-out ;
-
-                
-            }
-
-
-        }
         
 
-        &__checkbox{
-                display: none;
+        
+        
+
+            &__titre{
+                font-size: 20px;
+                text-transform: uppercase;
+
             }
+
+            &__underline{
+                width:50px;
+                height: 0px;
+                border: 2px solid var(--tertiaire-color);
+
+            }
+
+        
+
+            &__label{
+
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+
+                width:100%;
+                height: 60px;
+                margin: 20px 0px;
+                border-radius: 10px;
+                background-color: var(--background-color-white);
+                border: 2px solid red;
+
+                
+                &__info{
+
+                    flex: 1 0 80%;
+                    position: relative;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    border: 2px solid green;
+
+                    &__text{
+                        font-size: 16px;
+                        
+
+                        &--bold{
+                            font-weight: bold;
+                        }
+                    
+                        
+                        &__price{
+                            position: absolute;
+                            bottom: 5px;
+                            right: 10px;
+                        }
+                    }
+                }
+
+                &__valid{
+
+                    flex:  0 0 0%;
+                    height: 100%;
+                    background-color: var(--tertiaire-color);
+                    
+
+                    
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+
+                    transition: flex 0.3s ease-in-out ;
+
+                    
+                }
+
+            }   
+                
+        
+
+            &__checkbox{
+
+                display: none;
+                
+
+                    &:checked + .card-#{$var}__label > .card-#{$var}__label__valid {
+
+                        flex: 1 1 20%;
+                        
+                    }
+            }    
+            
+        
+
+        
+        
     }
     
 }

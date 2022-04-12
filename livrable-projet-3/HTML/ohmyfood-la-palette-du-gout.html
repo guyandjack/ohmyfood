@@ -65,6 +65,7 @@
     
     
     </svg>
+
     <div class="container-global-sheet">
       <header id="start" class="header">
         <nav class="nav">
@@ -86,9 +87,14 @@
         </nav>
       </header>
       <main>
-        <div class="container-restaurant">
+        <div class="main-container">
 
-          <div class="cont-img">
+          <div class="restaurant">
+
+            <div id="la-palette" class="restaurant__img">
+
+            </div>
+
 
           </div>
 
@@ -106,6 +112,8 @@
 
                 <span class="card-entree__titre">entrées</span>
                 <div class="card-entree__underline"></div>
+
+                <input class="card-entree__checkbox" type="checkbox" name="entree-1" id="entree-1">
 
                 <label class="card-entree__label" for="entree-1">
 
@@ -128,51 +136,177 @@
                   </div>
 
                 </label>
-                <input class="card-entree__checkbox" type="checkbox" name="entree-1" id="entree-1">
 
-                <label class="card-entree__label" for="entree-2">
-                  <div class="card-entree__label__info">
-                    <span class=""></span>
-                    <span class=""></span>
-                    <span class=""></span>
-                  </div>
-                </label>
+                
                 <input class="card-entree__checkbox" type="checkbox" name="entree-2" id="entree-2">
 
-                <label class="card-entree__label" for="entree-3">
+                <label class="card-entree__label" for="entree-2">
+
                   <div class="card-entree__label__info">
-                    <span class=""></span>
-                    <span></span>
-                    <span></span>
+                    <span class="card-entree__label__info__text--bold">Foie gras de canard mi-cuit</span>
+                    <span class="card-entree__label__info__text">Et ses copeaux de truffe noire</span>
+                    <span class="card-entree__label__info__price">35€</span>
                   </div>
+
+                  <div class="card-entree__label__valid">
+
+                  </div>
+                  
+
                 </label>
+                
                 <input class="card-entree__checkbox" type="checkbox" name="entree-3" id="entree-3">
+                <label class="card-entree__label" for="entree-3">
+
+                  <div class="card-entree__label__info">
+                    <span class="card-entree__label__info__text--bold">Oeuf au plat</span>
+                    <span class="card-entree__label__info__text">Assaisonné à la truffe sur lit de caviar</span>
+                    <span class="card-entree__label__info__price">20€</span>
+                  </div>
+
+                  <div class="card-entree__label__valid">
+
+                  </div>
+
+                </label>
+                
 
               </div>
 
               <div class="card-plat">
-                <span>titre</span>
-                <div>undrline</div>
-                <label for=""></label>
-                <input type="checkbox" name="" id="">
-                <label for=""></label>
-                <input type="checkbox" name="" id="">
-                <label for=""></label>
-                <input type="checkbox" name="" id="">
+
+                <span class="card-plat__titre">plats</span>
+                <div class="card-plat__underline"></div>
+
+                <input class="card-plat__checkbox" type="checkbox" name="plat-1" id="plat-1">
+                <label class="card-plat__label" for="plat-1">
+
+                  <div class="card-plat__label__info">
+
+                    <span class="card-plat__label__info__text--bold">
+                      Filets de boeuf aux herbes
+                    </span>
+                    <span class="card-plat__label__info__text">
+                      Accompagné de sa ribambelle de légumes
+                    </span>
+                    <span class="card-plat__label__info__price">
+                      40€
+                    </span>
+                    
+                  </div>
+                  
+                  <div class="card-plat__label__valid">
+                    
+                  </div>
+                  
+                </label>
+                
+                <input class="card-plat__checkbox" type="checkbox" name="plat-2" id="plat-2">
+                <label class="card-plat__label" for="plat-2">
+
+                  <div class="card-plat__label__info">
+                    <span class="card-plat__label__info__text--bold">Parmentier de queue de boeuf</span>
+                    <span class="card-plat__label__info__text">À la truffe noire sur sa purée de panais</span>
+                    <span class="card-plat__label__info__price">35€</span>
+                  </div>
+
+                  <div class="card-plat__label__valid">
+
+                  </div>
+
+                </label>
+                
+                <input class="card-plat__checkbox" type="checkbox" name="plat-3" id="plat-3">
+                <label class="card-plat__label" for="plat-3">
+
+                  <div class="card-plat__label__info">
+                    <span class="card-plat__label__info__text--bold">Filet de turbot</span>
+                    <span class="card-plat__label__info__text">Aux agrumes</span>
+                    <span class="card-plat__label__info__price">44€</span>
+                  </div>
+
+                  <div class="card-plat__label__valid">
+
+                  </div>
+
+                </label>
+                
+
               </div>
 
-              <div class="carte dessrret">
-                <span>titre</span>
-                <div>undrline</div>
-                <label for=""></label>
-                <input type="checkbox" name="" id="">
-                <label for=""></label>
-                <input type="checkbox" name="" id="">
-                <label for=""></label>
-                <input type="checkbox" name="" id="">
+              <div class="card-dessert">
+
+                <span class="card-dessert__titre">desserts</span>
+                <div class="card-dessert__underline"></div>
+
+
+                <input class="card-dessert__checkbox" type="checkbox" name="dessert-1" id="dessert-1">
+                <label class="card-dessert__label" for="dessert-1">
+
+                  <div class="card-dessert__label__info">
+
+                    <span class="card-dessert__label__info__text--bold">
+                      Paris-Brest
+                    </span>
+                    <span class="card-dessert__label__info__text">
+                    Revisité
+                    </span>
+                    <span class="card-dessert__label__info__price">
+                      18€
+                    </span>
+
+                  </div>
+
+                  <div class="card-dessert__label__valid">
+
+                  </div>
+
+                </label>
+                
+                <input class="card-dessert__checkbox" type="checkbox" name="dessert-2" id="dessert-2">
+                <label class="card-dessert__label" for="dessert-2">
+
+                  <div class="card-dessert__label__info">
+                    <span class="card-dessert__label__info__text--bold">Macaron au chocolat d'exception </span>
+                    <span class="card-dessert__label__info__text">
+                      Et glace à la vanille de Madagascar
+                    </span>
+                    <span class="card-dessert__label__info__price">
+                      22€
+                    </span>
+                  </div>
+
+                  <div class="card-dessert__label__valid">
+
+                  </div>
+
+                </label>
+                
+                <input class="card-dessert__checkbox" type="checkbox" name="dessert-3" id="dessert-3">
+                <label class="card-dessert__label" for="dessert-3">
+
+                  <div class="card-dessert__label__info">
+                    <span class="card-dessert__label__info__text--bold">Mousse au chocolat
+
+                    </span>
+                    <span class="card-dessert__label__info__text">
+                      Au piment d'Espelette et à la truffe noire
+                    </span>
+                    <span class="card-dessert__label__info__price">
+                      23€
+                    </span>
+                  </div>
+
+                  <div class="card-dessert__label__valid">
+
+                  </div>
+
+                </label>
+                
+
               </div>
 
-              <button type="submit"></button>
+              <button class="" type="submit" name="">commander</button>
             
             </form>
 

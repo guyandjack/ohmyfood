@@ -1,28 +1,120 @@
+@charset "UTF-8";
 /*************************************************************************************
 ***************** concerne la partie "main" des pages restaurant**********************
 **************************************************************************************/
-/************ screen < 768px*************
-****************************************/
+/*************************mobil first **********************************************
+***********************screen < 768px*************************************************
+**************************************************************************************/
 .main-container {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
+  /************ 768px < screen < 992px*************
+    ************************************************/
+  /************ screen > 992px*************
+    ****************************************/
 }
 
-.main-container__cont {
+/******* conteneur de l' image de presentation du restaurant******/
+/************** screen < 768px ********************************/
+.restaurant {
   width: 100%;
   height: 400px;
+  /******* conteneur de l' image de presentation du restaurant**********/
+  /************** 768px < screen < 992px ********************************/
+  /******* conteneur de l' image de presentation du restaurant******/
+  /************** screen > 992px ********************************/
 }
 
-.main-container__cont__img {
+.restaurant__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-repeat: none;
+  background-size: cover;
+}
+
+/*************** image de presentation à disposition ***********/
+/************** screen < 768px ********************************/
+#la-palette {
+  background-image: url("../IMAGES/restaurants/img-300px/la-palette-du-gout-300px.png");
+  /************** 768px < screen < 992px ********************************/
+  /************** screen > 992px ********************************/
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #la-palette {
+    background-image: url("../IMAGES/restaurants/img-600px/la-palette-du-gout-600px.png");
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #la-palette {
+    background-image: url("../IMAGES/restaurants/img-900px/la-palette-du-gout-900px.png");
+  }
+}
+
+/************** screen < 768px ********************************/
+#le-delice {
+  background-image: url("../IMAGES/restaurants/img-300px/le-delice-des-sens-300px.png");
+  /************** 768px < screen < 992px ********************************/
+  /************** screen > 992px ********************************/
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #le-delice {
+    background-image: url("../IMAGES/restaurants/img-600px/le-delice-des-sens-600px.png");
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #le-delice {
+    background-image: url("../IMAGES/restaurants/img-900px/le-delice-des-sens-900px.png");
+  }
+}
+
+/************** screen < 768px ********************************/
+#la-note {
+  background-image: url("../IMAGES/restaurants/img-300px/la-note-enchantee-300px.png");
+  /************** 768px < screen < 992px ********************************/
+  /************** screen > 992px ********************************/
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #la-note {
+    background-image: url("../IMAGES/restaurants/img-600px/la-note-enchantee-600px.png");
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #la-note {
+    background-image: url("../IMAGES/restaurants/img-900px/la-note-enchantee-900px.png");
+  }
+}
+
+/************** screen < 768px ********************************/
+#la-francaise {
+  background-image: url("../IMAGES/restaurants/img-300px/a-la-francaise-300px.png");
+  /************** 768px < screen < 992px ********************************/
+  /************** screen > 992px ********************************/
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #la-francaise {
+    background-image: url("../IMAGES/restaurants/img-600px/a-la-francaise-600px.png");
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #la-francaise {
+    background-image: url("../IMAGES/restaurants/img-600px/a-la-francaise-600px.png");
+  }
 }
 
 .container-menu {
+  width: 100%;
+  border: 2px solid green;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -46,19 +138,37 @@
   height: 50px;
 }
 
+/****** conteneur qui contient les trois cartes (entree, plats, dessert) *****/
 .form {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
 }
 
+/*** carte-entree ***/
 .card-entree {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 500px;
+  width: 100%;
+  border: 2px solid red;
+  /****** 768px < screen < 992px  ****/
+  /******** screen > 992px  ****/
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .card-entree {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-entree {
+    width: 40%;
+  }
 }
 
 .card-entree__titre {
@@ -67,7 +177,7 @@
 }
 
 .card-entree__underline {
-  width: 80px;
+  width: 50px;
   height: 0px;
   border: 2px solid var(--tertiaire-color);
 }
@@ -83,10 +193,6 @@
   border-radius: 10px;
   background-color: var(--background-color-white);
   border: 2px solid red;
-}
-
-.card-entree__label:hover .card-entree__label__valid {
-  flex: 0 0 20%;
 }
 
 .card-entree__label__info {
@@ -117,7 +223,6 @@
   flex: 0 0 0%;
   height: 100%;
   background-color: var(--tertiaire-color);
-  border: 4px solid blue;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -129,12 +234,32 @@
   display: none;
 }
 
+.card-entree__checkbox:checked + .card-entree__label > .card-entree__label__valid {
+  flex: 1 1 20%;
+}
+
+/*** carte-plat ***/
 .card-plat {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 500px;
+  width: 100%;
+  border: 2px solid red;
+  /****** 768px < screen < 992px  ****/
+  /******** screen > 992px  ****/
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .card-plat {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-plat {
+    width: 40%;
+  }
 }
 
 .card-plat__titre {
@@ -143,7 +268,7 @@
 }
 
 .card-plat__underline {
-  width: 80px;
+  width: 50px;
   height: 0px;
   border: 2px solid var(--tertiaire-color);
 }
@@ -159,10 +284,6 @@
   border-radius: 10px;
   background-color: var(--background-color-white);
   border: 2px solid red;
-}
-
-.card-plat__label:hover .card-plat__label__valid {
-  flex: 0 0 20%;
 }
 
 .card-plat__label__info {
@@ -193,7 +314,6 @@
   flex: 0 0 0%;
   height: 100%;
   background-color: var(--tertiaire-color);
-  border: 4px solid blue;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -205,12 +325,32 @@
   display: none;
 }
 
+.card-plat__checkbox:checked + .card-plat__label > .card-plat__label__valid {
+  flex: 1 1 20%;
+}
+
+/*** carte-dessert ***/
 .card-dessert {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 500px;
+  width: 100%;
+  border: 2px solid red;
+  /****** 768px < screen < 992px  ****/
+  /******** screen > 992px  ****/
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .card-dessert {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-dessert {
+    width: 40%;
+  }
 }
 
 .card-dessert__titre {
@@ -219,7 +359,7 @@
 }
 
 .card-dessert__underline {
-  width: 80px;
+  width: 50px;
   height: 0px;
   border: 2px solid var(--tertiaire-color);
 }
@@ -235,10 +375,6 @@
   border-radius: 10px;
   background-color: var(--background-color-white);
   border: 2px solid red;
-}
-
-.card-dessert__label:hover .card-dessert__label__valid {
-  flex: 0 0 20%;
 }
 
 .card-dessert__label__info {
@@ -269,7 +405,6 @@
   flex: 0 0 0%;
   height: 100%;
   background-color: var(--tertiaire-color);
-  border: 4px solid blue;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -279,4 +414,8 @@
 
 .card-dessert__checkbox {
   display: none;
+}
+
+.card-dessert__checkbox:checked + .card-dessert__label > .card-dessert__label__valid {
+  flex: 1 1 20%;
 }
