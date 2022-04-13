@@ -1,0 +1,27 @@
+/**************************************************************************************
+/******************* concerne les composants du site "ohmyfood" ************************
+***************************************************************************************/
+
+/*** bouton "commander" et "explorer"***/
+
+.button-explorer{
+
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+
+    background: linear-gradient(-10deg, $primaire-color 10%, $secondaire-color 100% ) ;
+    box-shadow: $boxshadow-button;
+
+        &:hover{
+                opacity: 0.8;
+                box-shadow: $boxshadow-button;
+        }
+}
+

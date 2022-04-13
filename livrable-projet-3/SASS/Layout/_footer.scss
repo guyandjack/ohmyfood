@@ -1,0 +1,45 @@
+/**************************************************************
+************ concerne le footer des pages "OHMYFOOD" **********
+***************************************************************/
+
+.footer{
+    
+    width: 100%;
+    padding: 20px;
+    background-color: $background-color-footer;
+
+    svg{
+        width: 100px;
+        height: 30px;
+        fill: $font-color-white;
+    }
+
+    a{
+        color:$font-color-white;
+    }
+
+    .menu{
+    
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+        &__li{
+
+            margin: 5px 0px;
+
+                &__icon{
+                    width: 16px;
+                    height: 16px;
+                   
+            }
+        }
+
+    }
+}
+
+
+
+
+
