@@ -1,0 +1,49 @@
+/*************************************************************************************
+***************** fichier de style principal pour la mise en page "homyfood" *********
+**************************************************************************************/
+
+//fichier de style pour la compatibilite entre les navigateurs
+@import "./Vendors/normelize";
+
+//declaration des variables, des "class" communes à toute les pages
+@import "./Base/base";
+
+//elements simples avec un style commun
+@import "./Composants/bouton-cta";
+
+//decoupage et structure des pages selon des blocs fonctionnels 
+//@import "./Layout/main";
+@import "./Layout/header";
+@import "./Layout/footer";
+@import "./Layout/page-accueil/search-bar";
+@import "./Layout/page-accueil/section-presentation";
+@import "./Layout/page-accueil/aside-fonctionnement";
+@import "./Layout/page-accueil/section-card-restaurant";
+@import "./Layout/page-accueil/img-svg";
+
+
+//style  specifique à une page
+//@import "./Pages/accueil-index";
+
+//fonction, mixin, animation
+@import "./Utils/loading-spinner";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+

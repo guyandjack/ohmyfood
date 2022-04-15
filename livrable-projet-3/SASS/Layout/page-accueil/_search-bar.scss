@@ -1,0 +1,36 @@
+/**************************************************************************
+********concerne le style de la page ohmyfood-accueil-index.html **********
+**************************************************************************/
+
+/***** concerne la search-bar ******/
+
+.accueil{
+
+
+    .search-bar{
+
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: $background-color-search;
+        box-shadow: $boxshadow-search;
+        
+        &__input{
+            flex: 0 0 auto;
+            padding: 15px 0px;
+            border: none;
+            text-align: center;
+            background-color: transparent;
+        }
+
+        &__icon{
+            width:20px;
+            height: 20px;
+            position: relative;
+            left: 30px;
+        }
+
+    }
+}

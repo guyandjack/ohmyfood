@@ -4,12 +4,14 @@
 
 /*** bouton "commander" et "explorer"***/
 
-.button-explorer{
-
+.button-cta{
     margin-top: 40px;
-    padding: 20px;
+    padding: 15px ;
     font-size: 16px;
+    width:70%;
     border: none;
+    opacity: 1;
+   
 
     border-bottom-left-radius: 28px;
     border-bottom-right-radius: 28px;
@@ -19,9 +21,18 @@
     background: linear-gradient(-10deg, $primaire-color 10%, $secondaire-color 100% ) ;
     box-shadow: $boxshadow-button;
 
-        &:hover{
-                opacity: 0.8;
-                box-shadow: $boxshadow-button;
-        }
+    transition: transform 0.2s ease-in-out  0s, opacity 0.2s ease-in-out  0s;
+
+    &:hover{
+            box-shadow: $boxshadow-darken-button;
+            opacity:(0.8);
+            
+            
+    }
+
+      
 }
+
+
+
 

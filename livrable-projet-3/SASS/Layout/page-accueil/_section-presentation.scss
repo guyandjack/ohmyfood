@@ -1,0 +1,29 @@
+/**************************************************************************
+********concerne le style de la page ohmyfood-accueil-index.html **********
+**************************************************************************/
+
+
+/**** section presentation *****/
+.accueil{
+    
+    .presentation{
+
+        padding: 40px 20px 50px 20px;
+        background-color: $background-color-main;
+        text-align: center;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        &__text{
+
+            font-size: 18px;
+            padding-top: 20px;
+
+        }
+        
+
+    }
+}

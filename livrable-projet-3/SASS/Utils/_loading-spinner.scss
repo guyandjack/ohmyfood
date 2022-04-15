@@ -1,0 +1,153 @@
+/********************* concerne l' aniamation du spinner sur la page d' acceuil *************
+**********************************************************************************************/
+
+/**** definition des regles keyframes ***/
+
+@keyframes anim-global-sheet{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes anim-logo {
+  0% {
+    opacity: 0.2;
+    transform: translateX(-50%) translateY(-50%) scale(1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.9, 1.9);
+  }
+}
+
+@keyframes anim-ring {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+  }
+  100% {
+    transform:  translateX(-50%) translateY(-50%) rotateZ(1turn);
+  }
+}
+
+@keyframes anim-text {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes anim-container {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -5;  // positionne le container dessous la conteneur-global apres l' animation
+  }
+}
+
+/***** propriete commune aux elements ***/
+.absolute-center{
+  position:absolute;
+  top: 50vw;
+  left: 50vw;
+  transform:translateX(-50%) translateY(-50%);
+}
+
+
+/*** prorietes specifiques aux elements ****/
+
+/** appliqué à l' element body **/
+.relative{                 
+  position: relative;
+}
+
+/** appliqué au conteneur de la page ,ameliore le rendu entre le spinner et le contenu de la page d' acceuil ***/
+.container-global-sheet{
+
+ animation: anim-global-sheet 1s ease-in-out 2s 1 normal both ;
+ 
+}
+
+/*** conteneur de l' aniamation spinner ***/
+.container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  height: 100vw;
+  width: 100vw;
+  background-color: white;
+  
+  animation: anim-container 3s ease-in-out 0s normal 1 both;
+}
+
+/*** elements animés  ***/
+.ring {
+  
+  width: 30vw;
+  height: 30vw;
+  border: 20px solid $primaire-color;
+  border-radius: 100%;
+  border-right: 10px solid $secondaire-color;
+  border-top: 10px dotted $tertiaire-color;
+
+  animation: anim-ring 1s ease-in-out 0s alternate 2 both;
+
+  // ecran tablette
+  @media screen and (min-width: 768px) and (max-width: 992px){
+    border: 30px solid $primaire-color;
+    border-right: 15px solid $secondaire-color;
+    border-top: 15px dotted $tertiaire-color;
+    
+  }
+
+  // ecran desktop
+  @media screen and (min-width: 992px){
+    border: 40px solid $primaire-color;
+    border-right: 30px solid $secondaire-color;
+    border-top: 30px dotted $tertiaire-color;
+    
+  }
+      
+}
+
+  
+
+
+/**** logo "homyfoof.svg" ***/
+.cont-img-svg {
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%) scale(1, 1);
+  animation: anim-logo 1s linear 0s alternate 2 both;
+}
+
+/*** text "loading" ***/
+.text {
+  top:58vw;
+  font-size: 16px;
+  font-weight: 300;
+  color: $tertiaire-color;
+
+  // ecran tablette
+  @media screen and (min-width: 768px) and (max-width: 992px){
+      font-size: 30px;
+  }
+
+  // ecran desktop
+  @media screen and (min-width: 768px) and (max-width: 992px){
+      font-size: 40px;
+  }
+
+
+
+}

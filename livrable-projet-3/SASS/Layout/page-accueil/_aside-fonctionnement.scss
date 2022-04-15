@@ -1,0 +1,132 @@
+/**************************************************************************
+********concerne le style de la page ohmyfood-accueil-index.html **********
+**************************************************************************/
+
+/***** concerne le aside "Fonctionnement" ****/
+.accueil{
+
+    .fonctionnement{
+        padding: 50px 10px 50px 20px;
+
+    }
+
+    .container-btn-fonctionnement{
+
+        display:flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        
+    }
+
+    .btn-fonctionnement{
+
+        position: relative;
+        width: 100%;
+        margin-top: 40px;
+
+        
+        padding: 25px 25px 25px 0px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        
+        
+        background-color: $background-color-main;
+        box-shadow: $boxshadow-button;
+        
+
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        &:hover{
+
+            &::before{
+                opacity: 0.1;
+               
+            }
+
+            .btn-fonctionnement__icon__icon-2{
+
+                opacity: 1;
+            }
+           
+        }
+
+        &::before{
+            content:"";
+            position:absolute;
+            top:0px;
+            right:0px;
+            bottom: 0px;
+            left:0px;
+            padding: 25px 25px 25px 0px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: $secondaire-color;
+            opacity: 0;
+            z-index:-1;
+
+            transition: opacity 0.3s ease-in-out 0s;
+        }
+
+        &__number{
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            background-color: $primaire-color;
+            border-radius: 100%;
+            width: 20px;
+            height: 20px;
+            margin-right:10px;
+
+            position: relative;
+            left: -10px;
+
+           
+        }
+
+        &__icon{
+            position:relative;
+            color: $font-color-defaut;
+            opacity: 1;
+
+            transition: opacity 0.3s ease-in-out 0s;
+            
+             
+
+            &__icon-2{
+                
+                position:absolute;
+                top:0px;
+                right:0px;
+                bottom: 0px;
+                left:0px;
+                color:$primaire-color;
+                
+                
+                opacity: 0;
+
+                transition: opacity 0.3s ease-in-out 0s;
+
+            }
+                       
+        }
+
+        &__text{
+            
+            margin-left: 20px;
+        }
+
+    }
+
+}
