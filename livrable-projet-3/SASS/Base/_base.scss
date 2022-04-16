@@ -27,22 +27,35 @@ $primaire-color: #9356DC;
 $secondaire-color: #FF79DA;
 $tertiaire-color: #99E2D0;
 
+/*** couleur police ***/
+$color-font-new:rgb(19,126,98);
 $font-color-defaut : black;
 $font-color-white: white;
+
+/**** couleur de fond ***/
 
 $background-color-search: rgba(121, 118, 118, 0.2);
 $darken-background-color-search: rgba(121, 118, 118, 0.5);
 
-$background-color-main: rgba(121, 118, 118, 0.1);
+$background-color-main: #F6F6F6;
 
 
 $background-color-white: #FFFFFF;
-$background-color-footer: rgba(0, 0, 0, 0.8);
+$background-color-footer: #404040;
 
+/*** couleur ombrage ***/
 
 $boxshadow-search: 0px -2px 2px 0px $darken-background-color-search ;
+
 $boxshadow-button: 2px 2px 2px 2px rgba( 0, 0, 0, 0.4);
 $boxshadow-darken-button: 2px 2px 2px 2px rgba( 0, 0, 0, 0.8);
+
+$boxshadow-card:2px 2px 2px 2px $background-color-main;
+
+
+
+
+
 
 /*** breakpoint pour le responsive ***/
 $breakpoint-hight : 992px;

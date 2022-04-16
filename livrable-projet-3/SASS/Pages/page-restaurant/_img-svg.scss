@@ -1,17 +1,15 @@
 /**************************************************************************
-********concerne le style de la page ohmyfood-accueil-index.html **********
+********concerne le style de la page ohmyfood-restaurant **********
 **************************************************************************/
 
-.accueil{
-    /** concerne le positionnement et l' animation de l' icon "favoris-coeur" sur les cartes restaurant ***/
+#page-restaurant{
+    /** concerne le positionnement et l' animation de l' icon "favoris-coeur"  ***/
 
     .svg{
 
         height: 50px;                   
         width: 50px;
-        position: absolute;
-        right: 20px;
-        bottom: 10px;
+        
 
         fill-opacity: 0;
 
@@ -31,7 +29,7 @@
 
 
     .svg:hover{
-        transform-origin: bottom;
+        
         fill-opacity: 1;
         stroke-opacity: 0;
         transition-delay: 0s;

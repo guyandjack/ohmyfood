@@ -8,15 +8,29 @@
     padding: 20px;
     background-color: $background-color-footer;
 
-    svg{
-        width: 100px;
-        height: 30px;
-        fill: $font-color-white;
-    }
+    border: 2px solid green;
 
     a{
         color:$font-color-white;
+        
+        
     }
+
+    svg{
+        transform: translateX(-30px) scale(0.8) ;
+        fill: $font-color-white;
+        
+        
+    }
+
+    .lien-svg{
+        
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
 
     .menu{
     
@@ -24,6 +38,8 @@
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
+
+    margin-top: 10px;
     
         &__li{
 

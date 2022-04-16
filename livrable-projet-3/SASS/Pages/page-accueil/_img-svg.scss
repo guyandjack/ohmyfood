@@ -1,0 +1,52 @@
+/**************************************************************************
+********concerne le style de la page ohmyfood-accueil-index.html **********
+**************************************************************************/
+
+.accueil{
+    /** concerne le positionnement et l' animation de l' icon "favoris-coeur"  ***/
+
+    .svg{
+
+        height: 50px;                   
+        width: 50px;
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+
+        fill-opacity: 0;
+
+        stroke-width: 1px;
+        stroke:black;
+        stroke-opacity: 1;
+        
+
+        transition-property: fill-opacity, stroke-opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0.3s;
+
+        
+    }
+
+
+
+    .svg:hover{
+        transform-origin: bottom;
+        fill-opacity: 1;
+        stroke-opacity: 0;
+        transition-delay: 0s;
+        
+    }
+
+    
+}
+
+#stop2{
+    stop-color: $primaire-color;
+        
+}
+
+#stop1{
+    stop-color: $secondaire-color;
+    
+}
