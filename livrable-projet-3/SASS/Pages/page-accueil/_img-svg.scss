@@ -5,7 +5,7 @@
 .accueil{
     /** concerne le positionnement et l' animation de l' icon "favoris-coeur"  ***/
 
-    .svg{
+    .svg-heart{
 
         height: 50px;                   
         width: 50px;
@@ -26,19 +26,16 @@
         transition-delay: 0.3s;
 
         
-    }
-
-
-
-    .svg:hover{
-        transform-origin: bottom;
-        fill-opacity: 1;
-        stroke-opacity: 0;
-        transition-delay: 0s;
+        &:hover{
+            transform-origin: bottom;
+            fill-opacity: 1;
+            //stroke-opacity: 0;
+            transition-delay: 0s;
+        
+        }
         
     }
 
-    
 }
 
 #stop2{
