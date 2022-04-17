@@ -3,99 +3,107 @@
 /*******************************************************************
 /*****************header pour le site "homyfood" ********************
 ********************************************************************/
+
+
 .header{
 
 
     nav{
 
         .menu{
-        width:100%;
-        height:70px;
+            position:relative;
+            width:100%;
+            height:70px;
 
-        
+            border: 2px solid red;
 
-        display: flex;
-        flex-flow:row nowrap;
-        justify-content: flex-start;
-        align-items: center;
 
-        @media screen and (min-width:768px) and (max-width:992px) {
+            @media screen and (min-width:768px) and (max-width:992px) {
 
-            height: 120px;
-                            
-                            
-        }
+                height: 120px;
+                                
+                                
+            }
 
-        @media screen and (min-width:992px) {
+            @media screen and (min-width:992px) {
 
-            height: 160px;
-                            
-                            
-        }
+                height: 160px;
+                                
+                                
+            }
 
 
 
-            &__lien{
-                flex: 1 1 auto;
-                height: 100%;
-                padding: 20px 0px;
+            &__lien-icon{
+
+                position:absolute;
+                top:50%;
+                left: 20px;
+                transform:translateY(-50%);
                 color: $font-color-defaut;
-            
+                font-size: 30px;
+                border: 2px solid orange;
 
+
+                @media screen and (min-width:768px) and (max-width:992px) {
+
+                    font-size: 40px;
+                    
+                    
+                }
+
+                @media screen and (min-width:992px) {
+
+                    font-size: 60px;
+                    
+                    
+                }
+                        
+                       
+            }     
+
+            &__lien-logo{
+                
+                              
+                position:absolute;
+                top:50%;
+                left: 50%;
+                
+                transform:translate(-50%, -50%) scale(0.8);
                 display: flex;
-                flex-flow:row nowrap;
+                flex-flow: row nowrap;
                 justify-content: center;
                 align-items: center;
+                border: 2px solid red;
+
+                @media screen and (min-width:768px) and (max-width:992px) {
+
+                    transform: translate(-50%, -50%) scale(2);
+                        
+                        
+                }
+
+                @media screen and (min-width:992px) {
+
+                    transform: translate(-50%, -50%) scale(3);
+                }
+                
+                
+                &__svg{
+
+                    
+                                   
+                    border: 2px solid purple;
+                   
+                }
+            }
 
             
 
-                    &__icon{
-
-                        font-size: 30px;
-
-                        @media screen and (min-width:768px) and (max-width:992px) {
-
-                            font-size: 40px;
-                            
-                            
-                        }
-
-                        @media screen and (min-width:992px) {
-
-                            font-size: 60px;
-                            
-                            
-                        }
-                        
-                    }
-
-                    &__logo{
-                        
-                        transform: scale(1.2);
-
-
-                        @media screen and (min-width:768px) and (max-width:992px) {
-
-                            transform: scale(2);
-                            
-                            
-                        }
-
-                        @media screen and (min-width:992px) {
-
-                            transform: scale(3);
-                            
-                            
-                        }
-
-
-                    
-                    }
-
-            }
         }
     }
 }
+
     
     
 

@@ -36,6 +36,8 @@
         
         background-color: $background-color-main;
         box-shadow: $boxshadow-button;
+
+
         
 
         display:flex;
@@ -46,7 +48,7 @@
         &:hover{
 
             &::before{
-                opacity: 0.1;
+                opacity:0.1;
                
             }
 
@@ -70,8 +72,9 @@
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
             background-color: $secondaire-color;
+            
             opacity: 0;
-            z-index:-1;
+            
 
             transition: opacity 0.3s ease-in-out 0s;
         }

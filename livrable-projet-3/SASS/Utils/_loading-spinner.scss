@@ -1,8 +1,27 @@
 /********************* concerne l' aniamation du spinner sur la page d' acceuil *************
 **********************************************************************************************/
 
-/**** definition des regles keyframes ***/
+/********************** declaration des mixin *************************/
 
+
+// modifie la taille et l opacité du logo dans le spinner
+
+@mixin scale-logo-start($scale:1){
+    opacity: 0.2;
+    transform: translate(-50%) scale($scale) ;
+}
+
+@mixin scale-logo-end ($scale:1.5){
+    opacity: 1;
+    transform: translate(-50%) scale($scale) ;
+}
+
+
+
+/************************** definition des regles keyframes pour les animations **************/
+
+
+//modifi l opacite sur la page conteneur principale
 @keyframes anim-global-sheet{
   0%{
     opacity: 0;
@@ -12,17 +31,41 @@
   }
 }
 
-@keyframes anim-logo {
+//animation sur le logo du spinner
+@keyframes anim-logo-small {
   0% {
-    opacity: 0.2;
-    transform: translateX(-50%) translateY(-50%) scale(1, 1);
+    @include scale-logo-start();
   }
   100% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-50%) scale(1.9, 1.9);
+
+     @include scale-logo-end();
+  
   }
 }
 
+@keyframes anim-logo-medium {
+  0% {
+    @include scale-logo-start(1.5);
+  }
+  100% {
+
+     @include scale-logo-end(3);
+  
+  }
+}
+
+@keyframes anim-logo-large {
+  0% {
+    @include scale-logo-start(2);
+  }
+  100% {
+
+     @include scale-logo-end(5);
+  
+  }
+}
+
+// animation qui fait tourner le spinner
 @keyframes anim-ring {
   0% {
     transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
@@ -32,49 +75,45 @@
   }
 }
 
-@keyframes anim-text {
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
+ // positionne le container dessous la conteneur-global apres l' animation
 @keyframes anim-container {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    z-index: -5;  // positionne le container dessous la conteneur-global apres l' animation
+    z-index: -5; 
   }
 }
 
-/***** propriete commune aux elements ***/
+/***************************** proprietes communes aux elements *********************/
+
+//centre les elements à l interieur du spinner
 .absolute-center{
   position:absolute;
   top: 50vw;
   left: 50vw;
-  transform:translateX(-50%) translateY(-50%);
+  transform:translate(-50%);
 }
 
 
-/*** prorietes specifiques aux elements ****/
+/********************************* prorietes specifiques aux elements ****************/
 
 /** appliqué à l' element body **/
 .relative{                 
   position: relative;
 }
 
-/** appliqué au conteneur de la page ,ameliore le rendu entre le spinner et le contenu de la page d' acceuil ***/
+/** appliqué au conteneur de la page ,ameliore la ransition  entre le spinner et le contenu de la page d' acceuil ***/
 .container-global-sheet{
 
  animation: anim-global-sheet 1s ease-in-out 2s 1 normal both ;
  
 }
 
-/*** conteneur de l' aniamation spinner ***/
+/*** conteneur general  de l' aniamation "loading-spinner" ***/
+
 .container {
   position: absolute;
   top: 0px;
@@ -88,10 +127,11 @@
 }
 
 /*** elements animés  ***/
+
 .ring {
   
-  width: 30vw;
-  height: 30vw;
+  width: 80vw;
+  height: 80vw;
   border: 20px solid $primaire-color;
   border-radius: 100%;
   border-right: 10px solid $secondaire-color;
@@ -101,6 +141,8 @@
 
   // ecran tablette
   @media screen and (min-width: 768px) and (max-width: 992px){
+    width: 80vw;
+    height: 80vw;
     border: 30px solid $primaire-color;
     border-right: 15px solid $secondaire-color;
     border-top: 15px dotted $tertiaire-color;
@@ -109,6 +151,8 @@
 
   // ecran desktop
   @media screen and (min-width: 992px){
+    width: 60vw;
+    height: 60vw;
     border: 40px solid $primaire-color;
     border-right: 30px solid $secondaire-color;
     border-top: 30px dotted $tertiaire-color;
@@ -120,32 +164,52 @@
   
 
 
-/**** logo "homyfoof.svg" ***/
+/**** logo "homyfood.svg" ***/
+
 .cont-img-svg {
   
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  transform: translate(-50%, -50%) scale(1, 1);
-  animation: anim-logo 1s linear 0s alternate 2 both;
-}
+  transform: translate(-50%, -50%) scale(1);
+  animation: anim-logo-small 1s linear 0s alternate 2 both;
 
-/*** text "loading" ***/
-.text {
-  top:58vw;
-  font-size: 16px;
-  font-weight: 300;
-  color: $tertiaire-color;
+  //ecran tablette
+  @media screen and (min-width: 768px) and (max-width: 992px) {
 
-  // ecran tablette
-  @media screen and (min-width: 768px) and (max-width: 992px){
-      font-size: 30px;
+    animation: anim-logo-medium 1s linear 0s alternate 2 both;
+    
   }
 
   // ecran desktop
+  @media screen and (min-width: 992px) {
+
+    animation: anim-logo-large 1s linear 0s alternate 2 both;
+    
+  }
+ 
+}
+
+/*** text "loading" ***/
+
+.text {
+  top:70vw;
+  font-size: 25px;
+  font-weight: 300;
+  color: $tertiaire-color;
+  transform: translate(-50%) ;
+
+  // ecran tablette
   @media screen and (min-width: 768px) and (max-width: 992px){
-      font-size: 40px;
+      top:70vw;
+      font-size: 50px;
+  }
+
+  // ecran desktop
+  @media screen and (min-width: 992px) {
+      top:65vw;
+      font-size: 80px;
   }
 
 

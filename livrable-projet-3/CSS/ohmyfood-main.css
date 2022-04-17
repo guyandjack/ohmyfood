@@ -423,12 +423,10 @@ template {
 /*****************header pour le site "homyfood" ********************
 ********************************************************************/
 .header nav .menu {
+  position: relative;
   width: 100%;
   height: 70px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  border: 2px solid red;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -443,47 +441,51 @@ template {
   }
 }
 
-.header nav .menu__lien {
-  flex: 1 1 auto;
-  height: 100%;
-  padding: 20px 0px;
+.header nav .menu__lien-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
   color: black;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.header nav .menu__lien__icon {
   font-size: 30px;
+  border: 2px solid orange;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .header nav .menu__lien__icon {
+  .header nav .menu__lien-icon {
     font-size: 40px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .header nav .menu__lien__icon {
+  .header nav .menu__lien-icon {
     font-size: 60px;
   }
 }
 
-.header nav .menu__lien__logo {
-  transform: scale(1.2);
+.header nav .menu__lien-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  border: 2px solid orange;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .header nav .menu__lien__logo {
-    transform: scale(2);
+  .header nav .menu__lien-logo {
+    transform: translate(-50%, -50%) scale(2);
   }
 }
 
 @media screen and (min-width: 992px) {
-  .header nav .menu__lien__logo {
-    transform: scale(3);
+  .header nav .menu__lien-logo {
+    transform: translate(-50%, -50%) scale(3);
   }
+}
+
+.header nav .menu__lien-logo__svg {
+  object-fit: contain;
+  border: 2px solid pink;
 }
 
 /**************************************************************
@@ -631,7 +633,6 @@ template {
   border-top-right-radius: 20px;
   background-color: #FF79DA;
   opacity: 0;
-  z-index: -1;
   transition: opacity 0.3s ease-in-out 0s;
 }
 
@@ -1345,7 +1346,8 @@ template {
 
 /********************* concerne l' aniamation du spinner sur la page d' acceuil *************
 **********************************************************************************************/
-/**** definition des regles keyframes ***/
+/********************** declaration des mixin *************************/
+/************************** definition des regles keyframes pour les animations **************/
 @keyframes anim-global-sheet {
   0% {
     opacity: 0;
@@ -1355,14 +1357,36 @@ template {
   }
 }
 
-@keyframes anim-logo {
+@keyframes anim-logo-small {
   0% {
     opacity: 0.2;
-    transform: translateX(-50%) translateY(-50%) scale(1, 1);
+    transform: translate(-50%) scale(1);
   }
   100% {
     opacity: 1;
-    transform: translateX(-50%) translateY(-50%) scale(1.9, 1.9);
+    transform: translate(-50%) scale(1.5);
+  }
+}
+
+@keyframes anim-logo-medium {
+  0% {
+    opacity: 0.2;
+    transform: translate(-50%) scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%) scale(3);
+  }
+}
+
+@keyframes anim-logo-large {
+  0% {
+    opacity: 0.2;
+    transform: translate(-50%) scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%) scale(5);
   }
 }
 
@@ -1372,15 +1396,6 @@ template {
   }
   100% {
     transform: translateX(-50%) translateY(-50%) rotateZ(1turn);
-  }
-}
-
-@keyframes anim-text {
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
@@ -1394,26 +1409,26 @@ template {
   }
 }
 
-/***** propriete commune aux elements ***/
+/***************************** proprietes communes aux elements *********************/
 .absolute-center {
   position: absolute;
   top: 50vw;
   left: 50vw;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%);
 }
 
-/*** prorietes specifiques aux elements ****/
+/********************************* prorietes specifiques aux elements ****************/
 /** appliqué à l' element body **/
 .relative {
   position: relative;
 }
 
-/** appliqué au conteneur de la page ,ameliore le rendu entre le spinner et le contenu de la page d' acceuil ***/
+/** appliqué au conteneur de la page ,ameliore la ransition  entre le spinner et le contenu de la page d' acceuil ***/
 .container-global-sheet {
   animation: anim-global-sheet 1s ease-in-out 2s 1 normal both;
 }
 
-/*** conteneur de l' aniamation spinner ***/
+/*** conteneur general  de l' aniamation "loading-spinner" ***/
 .container {
   position: absolute;
   top: 0px;
@@ -1427,8 +1442,8 @@ template {
 
 /*** elements animés  ***/
 .ring {
-  width: 30vw;
-  height: 30vw;
+  width: 80vw;
+  height: 80vw;
   border: 20px solid #9356DC;
   border-radius: 100%;
   border-right: 10px solid #FF79DA;
@@ -1438,6 +1453,8 @@ template {
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .ring {
+    width: 80vw;
+    height: 80vw;
     border: 30px solid #9356DC;
     border-right: 15px solid #FF79DA;
     border-top: 15px dotted #99E2D0;
@@ -1446,38 +1463,55 @@ template {
 
 @media screen and (min-width: 992px) {
   .ring {
+    width: 60vw;
+    height: 60vw;
     border: 40px solid #9356DC;
     border-right: 30px solid #FF79DA;
     border-top: 30px dotted #99E2D0;
   }
 }
 
-/**** logo "homyfoof.svg" ***/
+/**** logo "homyfood.svg" ***/
 .cont-img-svg {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  transform: translate(-50%, -50%) scale(1, 1);
-  animation: anim-logo 1s linear 0s alternate 2 both;
+  transform: translate(-50%, -50%) scale(1);
+  animation: anim-logo-small 1s linear 0s alternate 2 both;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .cont-img-svg {
+    animation: anim-logo-medium 1s linear 0s alternate 2 both;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cont-img-svg {
+    animation: anim-logo-large 1s linear 0s alternate 2 both;
+  }
 }
 
 /*** text "loading" ***/
 .text {
-  top: 58vw;
-  font-size: 16px;
+  top: 70vw;
+  font-size: 25px;
   font-weight: 300;
   color: #99E2D0;
+  transform: translate(-50%);
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .text {
-    font-size: 30px;
+    top: 70vw;
+    font-size: 50px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 992px) {
   .text {
-    font-size: 40px;
+    top: 65vw;
+    font-size: 80px;
   }
 }
