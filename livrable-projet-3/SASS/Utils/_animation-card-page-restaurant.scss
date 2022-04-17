@@ -1,0 +1,96 @@
+/********************* concerne l' aniamation des cartes sur les pages "restaurant" *************
+**********************************************************************************************/
+
+// concerne les cartes 
+@mixin display-card-start($Y:10%){
+    opacity: 0;
+    transform: translateY($Y);
+}
+
+@mixin display-card-end(){
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
+//  concerne le choix du menu
+@mixin display-food-start($Y:25%){
+    
+    transform: translateY($Y);
+}
+
+@mixin display-food-end(){
+    
+    transform: translateY(0%);
+}
+
+
+
+/***** declaration des keyframe concernant l animation des cartes   ***********/
+
+@keyframes display-card{
+    0%{
+        @include display-card-start();
+    }
+    100%{
+        @include display-card-end();
+    }
+}
+
+@keyframes display-food{
+    0%{
+        @include display-food-start();
+    }
+    100%{
+        @include display-food-end();
+    }
+}
+
+
+#page-restaurant{
+
+    //***** conteneur cartes *****
+
+    .animation-card-entree{
+
+        animation: display-card 0.5s ease 2s 1 normal both;
+
+    }
+
+    .animation-card-plat{
+
+        animation: display-card 0.5s ease 2.5s 1 normal both;
+
+    }
+
+    .animation-card-dessert{
+
+        animation: display-card 0.5s ease 3s 1 normal both;
+
+    }
+
+    //****** conteneur "label" selection des menus  ****
+
+    .animation-food-1{
+
+        animation: display-food 0.2s ease 2s 1 normal both;
+
+    }
+    .animation-food-2{
+
+        animation: display-food 0.2s ease 2.2s 1 normal both;
+
+    }
+    .animation-food-3{
+
+        animation: display-food 0.2s ease 2.4s 1 normal both;
+
+    }
+    .animation-food-4{
+
+        animation: display-food 0.2s ease 2.6s 1 normal both;
+
+    }
+}
+
+    
