@@ -124,9 +124,9 @@
 
                     
                     &__info{
-                        flex: 1 1 100%;
+                        flex: auto;
                         max-width: 100%;
-                        min-width: 80%;
+                        
                         height: 100%;
                         padding-left: 10px;
                         font-weight: bold;
@@ -165,7 +165,7 @@
                             &__price{
 
                                 flex: 0 0 auto;
-                                padding-right: 10px;                  
+                                padding-right: 50px;                  
                                 font-weight: bold;
                                 
                             }

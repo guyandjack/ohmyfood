@@ -26,7 +26,7 @@
 @import "./Pages/page-accueil/section-presentation";
 @import "./Pages/page-accueil/aside-fonctionnement";
 @import "./Pages/page-accueil/section-card-restaurant";
-@import "./Pages/page-accueil/img-svg";
+//@import "./Pages/page-accueil/img-svg";
 
 
 //page restaurant
@@ -39,6 +39,7 @@
 //fonction, mixin, animation
 @import "./Utils/loading-spinner";
 @import "./Utils/animation-card-page-restaurant";
+@import "./Utils/animation-heart-favoris";
 
 
 
