@@ -126,6 +126,9 @@
                     &__info{
                         flex: auto;
                         max-width: 100%;
+                        min-width: 80%;
+                        
+
                         
                         height: 100%;
                         padding-left: 10px;
@@ -154,19 +157,25 @@
                         
                             &--weight{
                                 
-                                flex: 0 1 80%;
+                                flex: auto;
+                                max-width: 80%;
+                                                              
                                 white-space: nowrap;
                                 text-overflow: ellipsis;
                                 overflow: hidden;
                                 font-weight: normal;
+
+                               
                                 
                             }
 
                             &__price{
-
                                 flex: 0 0 auto;
-                                padding-right: 50px;                  
+                                max-width:20%;
+
+                                margin-right: 10px;                  
                                 font-weight: bold;
+                                
                                 
                             }
                         }
