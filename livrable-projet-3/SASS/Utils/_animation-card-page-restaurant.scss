@@ -53,7 +53,7 @@
 
     //***** conteneur cartes *****
 
-    .animation-card-entree{
+   /* .animation-card-entree{
 
         animation: display-card 0.2s ease 0s 1 normal backwards;
 
@@ -61,36 +61,36 @@
 
     .animation-card-plat{
 
-        animation: display-card 0.2s ease 0.4s 1 normal backwards;
+        animation: display-card 0.2s ease 0.3s 1 normal backwards;
 
     }
 
     .animation-card-dessert{
 
-        animation: display-card 0.2s ease 0.8s 1 normal backwards;
+        animation: display-card 0.2s ease 0.4s 1 normal backwards;
 
-    }
+    }*/
 
     //****** conteneur "label" selection des menus  ****
 
     .animation-food-1{
 
-        animation: display-food 0.2s ease 0.2s 1 normal both;
+        animation: display-food 0.3s ease 0.2s 1 normal both;
 
     }
     .animation-food-2{
 
-        animation: display-food 0.2s ease 0.3s 1 normal both;
+        animation: display-food 0.3s ease 0.3s 1 normal both;
 
     }
     .animation-food-3{
 
-        animation: display-food 0.2s ease 0.4s 1 normal both;
+        animation: display-food 0.3s ease 0.4s 1 normal both;
 
     }
     .animation-food-4{
 
-        animation: display-food 0.2s ease 0.5s 1 normal both;
+        animation: display-food 0.3s ease 0.5s 1 normal both;
 
     }
 }
