@@ -95,7 +95,7 @@
 
 /** appliqué au conteneur de la page ,ameliore la transition  entre le spinner et le contenu de la page d' acceuil ***/
 .accueil {
-  animation: anim-global-sheet 1s ease-in-out 2s 1 normal both;
+  animation: anim-global-sheet 1s ease-in-out 2s 1 normal backwards;
 }
 
 /*** conteneur general  de l' aniamation "loading-spinner" ***/
