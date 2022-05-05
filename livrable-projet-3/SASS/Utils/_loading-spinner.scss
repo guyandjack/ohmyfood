@@ -20,9 +20,11 @@
 //modifi l opacite sur la page conteneur principale
 @keyframes anim-global-sheet {
   0% {
+    display: block;
     opacity: 0;
   }
   100% {
+    display:block;
     opacity: 1;
   }
 }
@@ -95,6 +97,7 @@
 
 /** appliqué au conteneur de la page ,ameliore la transition  entre le spinner et le contenu de la page d' acceuil ***/
 .accueil {
+  display:none;
   animation: anim-global-sheet 1s ease-in-out 2s 1 normal backwards;
 }
 
