@@ -93,9 +93,9 @@
   position: relative;
 }
 
-/** appliqué au conteneur de la page ,ameliore la ransition  entre le spinner et le contenu de la page d' acceuil ***/
+/** appliqué au conteneur de la page ,ameliore la transition  entre le spinner et le contenu de la page d' acceuil ***/
 .accueil {
-  animation: anim-global-sheet 1s ease-in-out 2s 1 normal backwards;
+  animation: anim-global-sheet 1s ease-in-out 2s 1 normal both;
 }
 
 /*** conteneur general  de l' aniamation "loading-spinner" ***/
@@ -117,8 +117,8 @@
 .ring {
   width: 80vw;
   height: 80vw;
-  border: 20px solid $primary-color;
   border-radius: 100%;
+  border: 20px solid $primary-color;
   border-right: 10px solid $secondary-color;
   border-top: 10px dotted $tertiary-color;
 

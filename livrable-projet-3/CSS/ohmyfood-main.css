@@ -78,13 +78,15 @@
   background: linear-gradient(-10deg, #9356dc 10%, #ff79da 100%);
   -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
           box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
-  /*transition: /*transform 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;*/
+  -webkit-transition: opacity 0.2s ease-in-out 0s;
+  -o-transition: opacity 0.2s ease-in-out 0s;
+  transition: opacity 0.2s ease-in-out 0s;
 }
 
 .button-cta:hover {
   -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
           box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
-  /*opacity: (0.8);*/
+  opacity: 0.8;
 }
 
 /*******************************************************************
@@ -1595,10 +1597,10 @@
   position: relative;
 }
 
-/** appliqué au conteneur de la page ,ameliore la ransition  entre le spinner et le contenu de la page d' acceuil ***/
+/** appliqué au conteneur de la page ,ameliore la transition  entre le spinner et le contenu de la page d' acceuil ***/
 .accueil {
-  -webkit-animation: anim-global-sheet 1s ease-in-out 2s 1 normal backwards;
-          animation: anim-global-sheet 1s ease-in-out 2s 1 normal backwards;
+  -webkit-animation: anim-global-sheet 1s ease-in-out 2s 1 normal both;
+          animation: anim-global-sheet 1s ease-in-out 2s 1 normal both;
 }
 
 /*** conteneur general  de l' aniamation "loading-spinner" ***/
@@ -1618,8 +1620,8 @@
 .ring {
   width: 80vw;
   height: 80vw;
-  border: 20px solid #9356dc;
   border-radius: 100%;
+  border: 20px solid #9356dc;
   border-right: 10px solid #ff79da;
   border-top: 10px dotted #99e2d0;
   -webkit-animation: anim-ring 1s ease-in-out 0s alternate 2 both;
