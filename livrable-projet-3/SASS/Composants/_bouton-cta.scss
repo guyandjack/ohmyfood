@@ -26,10 +26,10 @@
   );
   box-shadow: $boxshadow-button;
 
-  transition: transform 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+  /*transition: /*transform 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;*/
 
   &:hover {
     box-shadow: $boxshadow-darken-button;
-    opacity: (0.8);
+    /*opacity: (0.8);*/
   }
 }
