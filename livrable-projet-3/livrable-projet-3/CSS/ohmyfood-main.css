@@ -672,7 +672,6 @@
   height: 300px;
   /******* conteneur de l' image de presentation du restaurant**********/
   /*************** image de presentation à disposition ***********/
-  /************** screen < 768px ********************************/
 }
 
 #page-restaurant .presentation-restaurant__img {
@@ -1728,26 +1727,6 @@
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
-}
-
-#page-restaurant {
-  /* .animation-card-entree{
-
-        animation: display-card 0.2s ease 0s 1 normal backwards;
-
-    }
-
-    .animation-card-plat{
-
-        animation: display-card 0.2s ease 0.3s 1 normal backwards;
-
-    }
-
-    .animation-card-dessert{
-
-        animation: display-card 0.2s ease 0.4s 1 normal backwards;
-
-    }*/
 }
 
 #page-restaurant .animation-food-1 {
