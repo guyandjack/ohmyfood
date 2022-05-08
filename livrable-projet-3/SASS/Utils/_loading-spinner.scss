@@ -3,30 +3,28 @@
 
 /********************** declaration des mixin *************************/
 
-
 // modifie la taille et l opacité du logo dans le spinner
 
-@mixin scale-logo-start($scale:1){
-    opacity: 0.2;
-    transform: translate(-50%) scale($scale) ;
+@mixin scale-logo-start($scale: 1) {
+  opacity: 0.2;
+  transform: translate(-50%) scale($scale);
 }
 
-@mixin scale-logo-end ($scale:1.5){
-    opacity: 1;
-    transform: translate(-50%) scale($scale) ;
+@mixin scale-logo-end($scale: 1.5) {
+  opacity: 1;
+  transform: translate(-50%) scale($scale);
 }
-
-
 
 /************************** definition des regles keyframes pour les animations **************/
 
-
 //modifi l opacite sur la page conteneur principale
-@keyframes anim-global-sheet{
-  0%{
+@keyframes anim-global-sheet {
+  0% {
+    
     opacity: 0;
   }
-  100%{
+  100% {
+    
     opacity: 1;
   }
 }
@@ -37,9 +35,7 @@
     @include scale-logo-start();
   }
   100% {
-
-     @include scale-logo-end();
-  
+    @include scale-logo-end();
   }
 }
 
@@ -48,9 +44,7 @@
     @include scale-logo-start(1.5);
   }
   100% {
-
-     @include scale-logo-end(3);
-  
+    @include scale-logo-end(3);
   }
 }
 
@@ -59,9 +53,7 @@
     @include scale-logo-start(2);
   }
   100% {
-
-     @include scale-logo-end(5);
-  
+    @include scale-logo-end(5);
   }
 }
 
@@ -71,45 +63,42 @@
     transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
   }
   100% {
-    transform:  translateX(-50%) translateY(-50%) rotateZ(1turn);
+    transform: translateX(-50%) translateY(-50%) rotateZ(1turn);
   }
 }
 
-
- // positionne le container dessous la conteneur-global apres l' animation
+// positionne le container dessous la conteneur-global apres l' animation
 @keyframes anim-container {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    z-index: -5; 
+    z-index: -5;
   }
 }
 
 /***************************** proprietes communes aux elements *********************/
 
 //centre les elements à l interieur du spinner
-.absolute-center{
-  position:absolute;
+.absolute-center {
+  position: absolute;
   top: 50vw;
   left: 50vw;
-  transform:translate(-50%);
+  transform: translate(-50%);
 }
-
 
 /********************************* prorietes specifiques aux elements ****************/
 
 /** appliqué à l' element body **/
-.relative{                 
+.relative {
   position: relative;
 }
 
-/** appliqué au conteneur de la page ,ameliore la ransition  entre le spinner et le contenu de la page d' acceuil ***/
-.container-global-sheet{
-
- animation: anim-global-sheet 1s ease-in-out 2s 1 normal backwards ;
- 
+/** appliqué au conteneur de la page ,ameliore la transition  entre le spinner et le contenu de la page d' acceuil ***/
+.accueil {
+  
+  animation: anim-global-sheet 1s ease-in-out 2s 1 normal both;
 }
 
 /*** conteneur general  de l' aniamation "loading-spinner" ***/
@@ -122,52 +111,44 @@
   height: 100vw;
   width: 100vw;
   background-color: white;
-  
+
   animation: anim-container 3s ease-in-out 0s normal 1 both;
 }
 
 /*** elements animés  ***/
 
 .ring {
-  
   width: 80vw;
   height: 80vw;
-  border: 20px solid $primaire-color;
   border-radius: 100%;
-  border-right: 10px solid $secondaire-color;
-  border-top: 10px dotted $tertiaire-color;
+  border: 20px solid $primary-color;
+  border-right: 10px solid $secondary-color;
+  border-top: 10px dotted $tertiary-color;
 
   animation: anim-ring 1s ease-in-out 0s alternate 2 both;
 
   // ecran tablette
-  @media screen and (min-width: 768px) and (max-width: 992px){
+  @media screen and (min-width: 768px) and (max-width: 992px) {
     width: 80vw;
     height: 80vw;
-    border: 30px solid $primaire-color;
-    border-right: 15px solid $secondaire-color;
-    border-top: 15px dotted $tertiaire-color;
-    
+    border: 30px solid $primary-color;
+    border-right: 15px solid $secondary-color;
+    border-top: 15px dotted $tertiary-color;
   }
 
   // ecran desktop
-  @media screen and (min-width: 992px){
+  @media screen and (min-width: 992px) {
     width: 60vw;
     height: 60vw;
-    border: 40px solid $primaire-color;
-    border-right: 30px solid $secondaire-color;
-    border-top: 30px dotted $tertiaire-color;
-    
+    border: 40px solid $primary-color;
+    border-right: 30px solid $secondary-color;
+    border-top: 30px dotted $tertiary-color;
   }
-      
 }
-
-  
-
 
 /**** logo "homyfood.svg" ***/
 
 .cont-img-svg {
-  
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -177,41 +158,33 @@
 
   //ecran tablette
   @media screen and (min-width: 768px) and (max-width: 992px) {
-
     animation: anim-logo-medium 1s linear 0s alternate 2 both;
-    
   }
 
   // ecran desktop
   @media screen and (min-width: 992px) {
-
     animation: anim-logo-large 1s linear 0s alternate 2 both;
-    
   }
- 
 }
 
 /*** text "loading" ***/
 
 .text {
-  top:70vw;
+  top: 70vw;
   font-size: 25px;
   font-weight: 300;
-  color: $tertiaire-color;
-  transform: translate(-50%) ;
+  color: $tertiary-color;
+  transform: translate(-50%);
 
   // ecran tablette
-  @media screen and (min-width: 768px) and (max-width: 992px){
-      top:70vw;
-      font-size: 50px;
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    top: 70vw;
+    font-size: 50px;
   }
 
   // ecran desktop
   @media screen and (min-width: 992px) {
-      top:65vw;
-      font-size: 80px;
+    top: 65vw;
+    font-size: 80px;
   }
-
-
-
 }

@@ -3,133 +3,167 @@
 **************************************************************************/
 
 /***** concerne le aside "Fonctionnement" ****/
-.accueil{
+.accueil {
 
-    .fonctionnement{
-        padding: 50px 10px 50px 20px;
+  .fonctionnement {
+    padding: 50px 10px 50px 20px;
+  }
 
+  .container-btn-fonctionnement {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    //  size screen > 768px pour tablette et desktop 
+    @media screen and (min-width:768px)  {
+      
+      align-items: center;
+    }
+  }
+
+  .btn-fonctionnement {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+
+    padding: 25px 25px 25px 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    background-color: $background-color-main;
+    box-shadow: $boxshadow-button;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    //  size screen > 768px pour tablette et desktop
+    @media screen and (min-width:768px)  {
+      padding: 0px;
+      width: 75%;
+      height: 80px;
+      
+      
     }
 
-    .container-btn-fonctionnement{
 
-        display:flex;
-        flex-flow: column;
+    &:hover {
+      &::before {
+        opacity: 0.1;
+      }
+
+      .btn-fonctionnement__icon__icon-2 {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      padding: 25px 25px 25px 0px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      background-color: $primary-color;
+
+      opacity: 0;
+
+      transition: opacity 0.3s ease-in-out 0s;
+    }
+
+    &__number {
+      flex: 0 0 26px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      
+      padding: 5px;
+      background-color: $primary-color;
+      border-radius: 100%;
+      margin-right: 10px;
+
+      position: relative;
+      left: -10px;
+
+      //    size screen > 768px  pour tablette et descktop
+      @media screen and (min-width:768px)  {
+        flex: 0 0 30%;
         justify-content: flex-start;
-        align-items: flex-start;
-
-        
-    }
-
-    .btn-fonctionnement{
-
-        position: relative;
-        width: 100%;
-        margin-top: 40px;
-
-        
-        padding: 25px 25px 25px 0px;
         border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        border-bottom-right-radius: 0px;
         border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        border-top-right-radius: 0px;
+        margin-right: 10%;
+        left:0px;
+        padding-left: 20px;
+        height: 100%;
         
+        background:linear-gradient( -45deg,  rgba(255, 255, 255, 0) 40%,  $primary-color 40% );
+        font-size: 30px;
         
-        background-color: $background-color-main;
-        box-shadow: $boxshadow-button;
+        font-weight: bold;
+      }
 
-
-        
-
-        display:flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-
-        &:hover{
-
-            &::before{
-                opacity:0.1;
-               
-            }
-
-            .btn-fonctionnement__icon__icon-2{
-
-                opacity: 1;
-            }
-           
-        }
-
-        &::before{
-            content:"";
-            position:absolute;
-            top:0px;
-            right:0px;
-            bottom: 0px;
-            left:0px;
-            padding: 25px 25px 25px 0px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            background-color: $secondaire-color;
-            
-            opacity: 0;
-            
-
-            transition: opacity 0.3s ease-in-out 0s;
-        }
-
-        &__number{
-
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-            padding: 5px;
-            background-color: $primaire-color;
-            border-radius: 100%;
-            width: 20px;
-            height: 20px;
-            margin-right:10px;
-
-            position: relative;
-            left: -10px;
-
-           
-        }
-
-        &__icon{
-            position:relative;
-            color: $font-color-defaut;
-            opacity: 1;
-
-            transition: opacity 0.3s ease-in-out 0s;
-            
-             
-
-            &__icon-2{
-                
-                position:absolute;
-                top:0px;
-                right:0px;
-                bottom: 0px;
-                left:0px;
-                color:$primaire-color;
-                
-                
-                opacity: 0;
-
-                transition: opacity 0.3s ease-in-out 0s;
-
-            }
-                       
-        }
-
-        &__text{
-            
-            margin-left: 20px;
-        }
-
+      
     }
 
+    &__icon {
+      flex: 0 0 auto;
+      position: relative;
+      color: darkgray;
+      font-size: 24px;
+      opacity: 1;
+      z-index: 5;
+
+      transition: opacity 0.3s ease-in-out 0s;
+
+      //  size screen > 768px  pour tablette et desktop
+          @media screen and (min-width:768px) {
+            
+            font-size: 30px;
+            margin-right: 10%;
+          
+        }
+
+      &__icon-2 {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        z-index: 6;
+        color: $primary-color;
+
+        opacity: 0;
+
+        transition: opacity 0.3s ease-in-out 0s;
+      }
+    }
+
+    &__text {
+      
+      flex: 0 0 auto;
+      position: relative;
+      z-index: 5;
+      margin-left: 20px;
+      font-weight: bold;
+
+      //  size screen > 768px pour tablette et desktop
+      @media screen and (min-width:768px) {
+          
+          font-size: 20px;
+      }
+
+    }
+  }
 }

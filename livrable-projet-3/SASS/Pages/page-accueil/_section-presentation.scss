@@ -22,6 +22,12 @@
             font-size: 18px;
             padding-top: 20px;
 
+            //  size screen > 768px pour tablette et desktop 
+            @media screen and (min-width:768px)  {
+      
+                font-size: 20px;
+            }
+
         }
         
 

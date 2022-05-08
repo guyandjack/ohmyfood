@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>OHMYFOOD - Le délice des sens</title>
+    <title>OHMYFOOD - réservez le menu qui vous convient</title>
 
     <meta
       name="description"
@@ -15,10 +15,9 @@
     />
 
     <!--feuille de style-->
-
     <link rel="stylesheet" href="../CSS/ohmyfood-main.css" />
 
-    <!--livbrairie de police "fontawesome" pour les icons-->
+    <!--librairie de police "fontawesome" pour les icons-->
     <script
       src="https://kit.fontawesome.com/880f64877b.js"
       crossorigin="anonymous"
@@ -35,10 +34,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="robot" content="index, follow" />
+    <meta name="robots" content="index, follow" />
   </head>
 
-  <body>
+  <body class="relative">
     <!--******************** declaration des elements svg***************************
     *********************************************************************************-->
 
@@ -105,21 +104,38 @@
       </defs>
     </svg>
 
+    <!--***************************** conteneur de l animation "loading-spinner" *******************
+    *************************************************************************************************-->
+
+    <div class="container">
+      <div class="absolute-center ring"></div>
+
+      <div class="absolute-center cont-img-svg">
+        <svg
+          class=""
+          width="196"
+          height="34"
+          viewBox="0 0 196 34"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use href="#logo-homyfood"></use>
+        </svg>
+      </div>
+
+      <span class="absolute-center text">loading</span>
+    </div>
+
     <!--*******************************************************************************************
-      **************************** conteneur general de la page "restaurant" **********************
+      **************************** conteneur general de la page "accueil" **********************
     ********************************************************************************************-->
 
-    <div id="page-restaurant" class="container-global-sheet">
+    <div class="accueil container-global-sheet">
       <!--************************* section "header" ************************************************
       ************************************************************************************************-->
 
       <header id="start" class="header">
         <nav>
           <div class="menu">
-            <a class="menu__lien-icon" href="ohmyfood-accueil-index.html">
-              <i class="fa-solid fa-arrow-left"></i>
-            </a>
-
             <a class="menu__lien-logo" href="ohmyfood-accueil-index.html">
               <img
                 class="menu__lien-logo__svg"
@@ -135,20 +151,126 @@
       *********************************************************************************************-->
 
       <main>
-        <div class="main-container">
-          <!--******************** section presentation *****************************
+        <!--******************** section search-bar*****************************
+        ************************************************************************-->
+
+        <form class="form" method="POST" action="map-location">
+          <label for="search"></label>
+          <div class="search-bar">
+            <span class="search-bar__icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </span>
+            <input
+              id="search"
+              class="search-bar__input"
+              type="text"
+              name="my-adress"
+              placeholder="Paris, Belleville"
+            />
+          </div>
+        </form>
+
+        <!--******************** section presentation *****************************
         *****************************************************************************-->
 
-          <div class="presentation-restaurant">
-            <div id="le-delice" class="presentation-restaurant__img"></div>
+        <section class="presentation">
+          <h1 class="title-h1">Réservez le menu qui vous convient</h1>
+
+          <p class="presentation__text">
+            Découvrez des restaurants d'ecxeption, sélectionnés par nos soins.
+          </p>
+
+          <button class="button-cta" type="button" disabled>
+            Explorer nos retaurants
+          </button>
+        </section>
+
+        <!--******************** section fonctionnement *****************************
+        *****************************************************************************-->
+
+        <aside class="fonctionnement">
+          <p class="title-h1">Fonctionnement</p>
+
+          <div class="container-btn-fonctionnement">
+            <div class="btn-fonctionnement">
+              <span class="btn-fonctionnement__number color-white">1</span>
+              <i
+                class="btn-fonctionnement__icon fa-solid fa-mobile-screen-button"
+              >
+                <i
+                  class="btn-fonctionnement__icon__icon-2 fa-solid fa-mobile-screen-button"
+                ></i>
+              </i>
+              <span class="btn-fonctionnement__text"
+                >Choisissez un restaurant
+              </span>
+            </div>
+
+            <div class="btn-fonctionnement">
+              <div class="btn-fonctionnement__number color-white">2</div>
+              <i class="btn-fonctionnement__icon fa-solid fa-list">
+                <i
+                  class="btn-fonctionnement__icon__icon-2 fa-solid fa-list"
+                ></i>
+              </i>
+              <span class="btn-fonctionnement__text menu"
+                >Composez votre menu</span
+              >
+            </div>
+
+            <div class="btn-fonctionnement">
+              <span class="btn-fonctionnement__number color-white">3</span>
+              <i class="btn-fonctionnement__icon fa-solid fa-store">
+                <i
+                  class="btn-fonctionnement__icon__icon-2 fa-solid fa-store"
+                ></i>
+              </i>
+
+              <span class="btn-fonctionnement__text"
+                >Dégustez au restaurant
+              </span>
+            </div>
           </div>
+        </aside>
 
-          <!--******************** section restaurant-menu *****************************
-            *****************************************************************************-->
+        <!--******************** section card-restaurant *****************************
+        ******************************************************************************-->
 
-          <div class="container-menu">
-            <div class="container-menu__cont">
-              <h1 class="container-menu__cont__titre">Le délice des sens</h1>
+        <section class="restaurant">
+          <h1 class="title-h1">Restaurants</h1>
+
+          <div class="container-card">
+            <div class="card">
+              <a class="card__link" href="ohmyfood-la-palette-du-gout.html">
+                <span class="nouveau">Nouveau</span>
+
+                <picture>
+                  <source
+                    srcset="
+                      ../IMAGES/restaurants/img-300px/la-palette-du-gout-300px.png
+                    "
+                    media="(max-width:576px)"
+                  />
+                  <source
+                    srcset="
+                      ../IMAGES/restaurants/img-900px/la-palette-du-gout-900px.png
+                    "
+                    media="(min-width:576px) and (max-width:1200px)"
+                  />
+                  <source
+                    srcset="
+                      ../IMAGES/restaurants/img-full/la-palette-du-gout-full.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    class="card__link__img"
+                    src="../IMAGES/restaurants/img-300px/la-palette-du-gout-300px.png"
+                    alt="Permet de selectionner le restaurant 'La palette du goût'."
+                  />
+                </picture>
+              </a>
 
               <div class="cont-svg-heart">
                 <svg
@@ -167,326 +289,181 @@
                   <use href="#heart-bg"></use>
                 </svg>
               </div>
+
+              <div class="card__info">
+                <span class="card__info__text--bold"> La palette du goût </span>
+                <span class="card__info__text"> Ménilmontant </span>
+              </div>
             </div>
 
-            <!--***** formulaire selction-menu ******-->
+            <div class="card">
+              <a class="card__link" href="ohmyfood-la-note-enchantee.html">
+                <span class="nouveau">Nouveau</span>
 
-            <form class="form" method="POST" action="selection-menu.php">
-              <!--***** carte entree ******-->
+                <picture>
+                  <source
+                    srcset="
+                      ../IMAGES/restaurants/img-300px/la-note-enchantee-300px.png
+                    "
+                    media="(max-width:576px)"
+                  />
+                  <source
+                    srcset="
+                      ../IMAGES/restaurants/img-900px/la-note-enchantee-900px.png
+                    "
+                    media="(min-width:576px) and (max-width:1200px)"
+                  />
+                  <source
+                    srcset="
+                      ../IMAGES/restaurants/img-full/la-note-enchantee-full.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
 
-              <div class="card-entree animation-card-entree">
-                <span class="card-entree__titre">entrées</span>
-                <div class="card-entree__underline"></div>
+                  <img
+                    class="card__link__img"
+                    src="../IMAGES/restaurants/img-300px/la-note-enchantee-300px.png"
+                    alt="Permet de selectionner le restaurant 'La note enchantée'."
+                  />
+                </picture>
+              </a>
 
-                <input
-                  class="card-entree__checkbox"
-                  type="checkbox"
-                  name="entree-1"
-                  id="entree-1"
-                />
-
-                <label
-                  class="card-entree__label animation-food-1"
-                  for="entree-1"
+              <div class="cont-svg-heart">
+                <svg
+                  class="svg-heart"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
                 >
-                  <span class="card-entree__label__info">
-                    <span> Tartare de thon </span>
+                  <use href="#heart"></use>
+                </svg>
 
-                    <span class="card-entree__label__info__cont">
-                      <span class="card-entree__label__info__cont--weight">
-                        Assaisonné au yuzu
-                      </span>
-
-                      <span class="card-entree__label__info__cont__price">
-                        25€
-                      </span>
-                    </span>
-                  </span>
-
-                  <span class="card-entree__label__valid">
-                    <i
-                      class="card-entree__label__valid__icon-check fa-solid fa-circle-check"
-                    >
-                    </i>
-                  </span>
-                </label>
-
-                <input
-                  class="card-entree__checkbox"
-                  type="checkbox"
-                  name="entree-2"
-                  id="entree-2"
-                />
-
-                <label
-                  class="card-entree__label animation-food-2"
-                  for="entree-2"
+                <svg
+                  class="svg-heart svg-heart-bg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
                 >
-                  <span class="card-entree__label__info">
-                    <span> Bouchée de homard croustillant </span>
-
-                    <span class="card-entree__label__info__cont">
-                      <span class="card-entree__label__info__cont--weight">
-                        Et sa farandole de petits légumes
-                      </span>
-
-                      <span class="card-entree__label__info__cont__price">
-                        35€
-                      </span>
-                    </span>
-                  </span>
-
-                  <span class="card-entree__label__valid">
-                    <i
-                      class="card-entree__label__valid__icon-check fa-solid fa-circle-check"
-                    >
-                    </i>
-                  </span>
-                </label>
-
-                <input
-                  class="card-entree__checkbox"
-                  type="checkbox"
-                  name="entree-3"
-                  id="entree-3"
-                />
-                <label
-                  class="card-entree__label animation-food-3"
-                  for="entree-3"
-                >
-                  <span class="card-entree__label__info">
-                    <span> Velouté de cèpes </span>
-
-                    <span class="card-entree__label__info__cont">
-                      <span class="card-entree__label__info__cont--weight">
-                        Aux truffes
-                      </span>
-
-                      <span class="card-entree__label__info__cont__price">
-                        20€
-                      </span>
-                    </span>
-                  </span>
-
-                  <span class="card-entree__label__valid">
-                    <i
-                      class="card-entree__label__valid__icon-check fa-solid fa-circle-check"
-                    >
-                    </i>
-                  </span>
-                </label>
+                  <use href="#heart-bg"></use>
+                </svg>
               </div>
 
-              <!--***** carte plat ******-->
+              <div class="card__info">
+                <span class="card__info__text--bold"> La note enchantée </span>
+                <span class="card__info__text"> Charonne </span>
+              </div>
+            </div>
 
-              <div class="card-plat animation-card-plat">
-                <span class="card-plat__titre">plats</span>
-                <div class="card-plat__underline"></div>
+            <div class="card">
+              <a class="card__link" href="ohmyfood-a-la-francaise.html">
+                <picture>
+                  <source
+                    srcset="
+                      ../IMAGES/restaurants/img-300px/a-la-francaise-300px.png
+                    "
+                    media="(max-width:576px)"
+                  />
+                  <source
+                    srcset="
+                      ../IMAGES/restaurants/img-900px/a-la-francaise-900px.png
+                    "
+                    media="(min-width:576px) and (max-width:1200px)"
+                  />
+                  <source
+                    srcset="
+                      ../IMAGES/restaurants/img-full/a-la-francaise-full.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
 
-                <input
-                  class="card-plat__checkbox"
-                  type="checkbox"
-                  name="plat-1"
-                  id="plat-1"
-                />
-                <label class="card-plat__label animation-food-1" for="plat-1">
-                  <span class="card-plat__label__info">
-                    <span> Poulet rôti aux herbes de Provence </span>
+                  <img
+                    class="card__link__img"
+                    src="../IMAGES/restaurants/img-300px/a-la-francaise-300px.png"
+                    alt="Permet de selectionner le restaurant 'A la française'."
+                  />
+                </picture>
+              </a>
 
-                    <span class="card-plat__label__info__cont">
-                      <span class="card-plat__label__info__cont--weight">
-                        Et sa crème de truffe
-                      </span>
+              <div class="cont-svg-heart">
+                <svg
+                  class="svg-heart"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <use href="#heart"></use>
+                </svg>
 
-                      <span class="card-plat__label__info__cont__price">
-                        40€
-                      </span>
-                    </span>
-                  </span>
-
-                  <span class="card-plat__label__valid">
-                    <i
-                      class="card-plat__label__valid__icon-check fa-solid fa-circle-check"
-                    >
-                    </i>
-                  </span>
-                </label>
-
-                <input
-                  class="card-plat__checkbox"
-                  type="checkbox"
-                  name="plat-2"
-                  id="plat-2"
-                />
-                <label class="card-plat__label animation-food-2" for="plat-2">
-                  <span class="card-plat__label__info">
-                    <span> Langouste rôtie </span>
-
-                    <span class="card-plat__label__info__cont">
-                      <span class="card-plat__label__info__cont--weight">
-                        Et ses légumes de saison
-                      </span>
-
-                      <span class="card-plat__label__info__cont__price">
-                        35€
-                      </span>
-                    </span>
-                  </span>
-
-                  <span class="card-plat__label__valid">
-                    <i
-                      class="card-plat__label__valid__icon-check fa-solid fa-circle-check"
-                    >
-                    </i>
-                  </span>
-                </label>
-
-                <input
-                  class="card-plat__checkbox"
-                  type="checkbox"
-                  name="plat-3"
-                  id="plat-3"
-                />
-                <label class="card-plat__label animation-food-3" for="plat-3">
-                  <span class="card-plat__label__info">
-                    <span> Côte de boeuf Angus </span>
-
-                    <span class="card-plat__label__info__cont">
-                      <span class="card-plat__label__info__cont--weight">
-                        Et sa purée de panais
-                      </span>
-
-                      <span class="card-plat__label__info__cont__price">
-                        44€
-                      </span>
-                    </span>
-                  </span>
-
-                  <span class="card-plat__label__valid">
-                    <i
-                      class="card-plat__label__valid__icon-check fa-solid fa-circle-check"
-                    >
-                    </i>
-                  </span>
-                </label>
+                <svg
+                  class="svg-heart svg-heart-bg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <use href="#heart-bg"></use>
+                </svg>
               </div>
 
-              <!--***** carte dessert ******-->
+              <div class="card__info">
+                <span class="card__info__text--bold"> A la française </span>
+                <span class="card__info__text"> Cité Rouge </span>
+              </div>
+            </div>
 
-              <div class="card-dessert animation-card-dessert">
-                <span class="card-dessert__titre">desserts</span>
-                <div class="card-dessert__underline"></div>
+            <div class="card">
+              <a class="card__link" href="ohmyfood-le-delice-des-sens.html">
+                <picture>
+                  <source
+                    srcset="
+                      ../IMAGES/restaurants/img-300px/le-delice-des-sens-300px.png
+                    "
+                    media="(max-width:576px)"
+                  />
+                  <source
+                    srcset="
+                      ../IMAGES/restaurants/img-900px/le-delice-des-sens-900px.png
+                    "
+                    media="(min-width:576px) and (max-width:1200px)"
+                  />
+                  <source
+                    srcset="
+                      ../IMAGES/restaurants/img-full/le-delice-des-sens-full.jpg
+                    "
+                    media="(min-width: 1200px)"
+                  />
 
-                <input
-                  class="card-dessert__checkbox"
-                  type="checkbox"
-                  name="dessert-1"
-                  id="dessert-1"
-                />
-                <label
-                  class="card-dessert__label animation-food-1"
-                  for="dessert-1"
+                  <img
+                    class="card__link__img"
+                    src="../IMAGES/restaurants/img-300px/le-delice-des-sens-300px.png"
+                    alt="Permet de selectionner le restaurant 'Le délice des sens'."
+                  />
+                </picture>
+              </a>
+
+              <div class="cont-svg-heart">
+                <svg
+                  class="svg-heart"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
                 >
-                  <span class="card-dessert__label__info">
-                    <span> Farandole de desserts </span>
+                  <use href="#heart"></use>
+                </svg>
 
-                    <span class="card-dessert__label__info__cont">
-                      <span class="card-dessert__label__info__cont--weight">
-                        Du chef
-                      </span>
-
-                      <span class="card-dessert__label__info__cont__price">
-                        18€
-                      </span>
-                    </span>
-                  </span>
-
-                  <span class="card-dessert__label__valid">
-                    <i
-                      class="card-dessert__label__valid__icon-check fa-solid fa-circle-check"
-                    >
-                    </i>
-                  </span>
-                </label>
-
-                <input
-                  class="card-dessert__checkbox"
-                  type="checkbox"
-                  name="dessert-2"
-                  id="dessert-2"
-                />
-                <label
-                  class="card-dessert__label animation-food-2"
-                  for="dessert-2"
+                <svg
+                  class="svg-heart svg-heart-bg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
                 >
-                  <span class="card-dessert__label__info">
-                    <span class="card-dessert__label__info__title">
-                      Crème brulée
-                    </span>
-
-                    <span class="card-dessert__label__info__cont">
-                      <span class="card-dessert__label__info__cont--weight">
-                        Revisitée
-                      </span>
-
-                      <span class="card-dessert__label__info__cont__price">
-                        22€
-                      </span>
-                    </span>
-                  </span>
-
-                  <span class="card-dessert__label__valid">
-                    <i
-                      class="card-dessert__label__valid__icon-check fa-solid fa-circle-check"
-                    >
-                    </i>
-                  </span>
-                </label>
-
-                <input
-                  class="card-dessert__checkbox"
-                  type="checkbox"
-                  name="dessert-3"
-                  id="dessert-3"
-                />
-                <label
-                  class="card-dessert__label animation-food-3"
-                  for="dessert-3"
-                >
-                  <span class="card-dessert__label__info">
-                    <span class="card-dessert__label__info__title">
-                      Tiramisu
-                    </span>
-
-                    <span class="card-dessert__label__info__cont">
-                      <span class="card-dessert__label__info__cont--weight">
-                        À la noisette
-                      </span>
-
-                      <span class="card-dessert__label__info__cont__price">
-                        23€
-                      </span>
-                    </span>
-                  </span>
-
-                  <span class="card-dessert__label__valid">
-                    <i
-                      class="card-dessert__label__valid__icon-check fa-solid fa-circle-check"
-                    >
-                    </i>
-                  </span>
-                </label>
+                  <use href="#heart-bg"></use>
+                </svg>
               </div>
 
-              <button class="button-cta" type="submit" disabled>
-                Commander
-              </button>
-            </form>
+              <div class="card__info">
+                <span class="card__info__text__bold"> Le délice des sens </span>
+                <span class="card__info__text"> Folie-Méricourt </span>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </main>
 
-      <!--*************************************** section "footer" ***************************************************
+      <!--*************************************** section "footer" *********************************************************
       ****************************************************************************************************************-->
 
       <footer class="footer">
