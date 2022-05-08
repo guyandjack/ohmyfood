@@ -16,24 +16,24 @@
         justify-content: flex-start;
         align-items: center;
 
-        /************ 768px < screen < 992px*************
-        ************************************************/
+        //************ 768px < screen < 992px*************
+        //************************************************/
 
 
-        /************ screen > 992px*************
-        ****************************************/
+        //************ screen > 992px*************
+        //****************************************/
 
 
     }
 
-    /*************************mobil first **********************************************
-    ***********************screen < 768px*************************************************
-    **************************************************************************************/
+    /*************************mobil first ***********************************************/
+    //***********************screen < 768px*************************************************
+    /***************************************************************************************/
 
 
 
     /******* conteneur de l' image de presentation du restaurant******/
-    /************** screen < 768px ********************************/
+    //************** screen < 768px ********************************/
     .presentation-restaurant{
 
         width: 100%;
@@ -54,7 +54,7 @@
         }
 
         /******* conteneur de l' image de presentation du restaurant**********/
-        /************** 768px < screen < 992px ********************************/
+        //************** 768px < screen < 992px ********************************/
 
 
 
@@ -63,17 +63,17 @@
         /*************** image de presentation à disposition ***********/
 
 
-        /************** screen < 768px ********************************/
+        //************** screen < 768px ********************************/
         #la-palette{
             background-image: url("../IMAGES/restaurants/img-300px/la-palette-du-gout-300px.png");
 
-            /************** 768px < screen < 992px ********************************/
+            //************** 768px < screen < 992px ********************************/
             @media screen and (min-width: 768px) and (max-width:992px) {
                 
                 background-image: url("../IMAGES/restaurants/img-900px/la-palette-du-gout-900px.png");
             }
 
-            /************** screen > 992px ********************************/
+            //************** screen > 992px ********************************/
             @media screen and (min-width: 992px) {
                 
                 background-image: url("../IMAGES/restaurants/img-full/la-palette-du-gout-full.jpg");
@@ -86,47 +86,47 @@
         #le-delice{
             background-image: url("../IMAGES/restaurants/img-300px/le-delice-des-sens-300px.png");
 
-            /************** 768px < screen < 992px ********************************/
+            //************** 768px < screen < 992px ********************************/
             @media screen and (min-width: 768px) and (max-width:992px) {
                 
                 background-image: url("../IMAGES/restaurants/img-900px/le-delice-des-sens-900px.png");
             }
 
-            /************** screen > 992px ********************************/
+            //************** screen > 992px ********************************/
             @media screen and (min-width: 992px) {
                 
                 background-image: url("../IMAGES/restaurants/img-full/le-delice-des-sens-full.jpg");
             }
         }
 
-        /************** screen < 768px ********************************/
+        //************** screen < 768px ********************************/
         #la-note{
             background-image: url("../IMAGES/restaurants/img-300px/la-note-enchantee-300px.png");
 
-            /************** 768px < screen < 992px ********************************/
+            //************** 768px < screen < 992px ********************************/
             @media screen and (min-width: 768px) and (max-width:992px) {
                 
                 background-image: url("../IMAGES/restaurants/img-900px/la-note-enchantee-900px.png");
             }
 
-            /************** screen > 992px ********************************/
+            //************** screen > 992px ********************************/
             @media screen and (min-width: 992px) {
                 
                 background-image: url("../IMAGES/restaurants/img-full/la-note-enchantee-full.jpg");
             }
         }
 
-        /************** screen < 768px ********************************/
+        //************** screen < 768px ********************************/
         #la-francaise{
             background-image: url("../IMAGES/restaurants/img-300px/a-la-francaise-300px.png");
 
-            /************** 768px < screen < 992px ********************************/
+            //************** 768px < screen < 992px ********************************/
             @media screen and (min-width: 768px) and (max-width:992px) {
                 
                 background-image: url("../IMAGES/restaurants/img-900px/a-la-francaise-900px.png");
             }
 
-            /************** screen > 992px ********************************/
+            //************** screen > 992px ********************************/
             @media screen and (min-width: 992px) {
                 
                 background-image: url("../IMAGES/restaurants/img-full/a-la-francaise-full.jpg");

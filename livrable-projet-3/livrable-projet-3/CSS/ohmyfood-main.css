@@ -1,0 +1,1864 @@
+@charset "UTF-8";
+/*************************************************************************************
+***************** fichier de style principal pour la mise en page "homyfood" *********
+**************************************************************************************/
+@import url("./../../node_modules/normalize.css/normalize.css");
+/************************************ OHMYFOOD **********************************************
+*************** *****proprietes communes aux pages OHMYFOOD ***********************
+*******************************************************************************************/
+/*** reset personnel de la page *****/
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+}
+
+/**** ************variables***********  *******/
+/*** police des titres ***/
+/*** couleur du theme ***/
+/*** couleur police ***/
+/**** couleur de fond ***/
+/*** couleur ombrage ***/
+/*** breakpoint pour le responsive ***/
+/*** conteneur global de la page  ***/
+.container-global-sheet {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+/**** concerne les balises titres h1 ***/
+.title-h1 {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.color-white {
+  color: #ffffff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.hiden {
+  display: none;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/**************************************************************************************
+/******************* concerne les composants du site "ohmyfood" ************************
+***************************************************************************************/
+/*** bouton "commander" et "explorer"***/
+.button-cta {
+  margin-top: 40px;
+  padding: 15px;
+  font-size: 16px;
+  color: white;
+  width: 70%;
+  max-width: 300px;
+  border: none;
+  opacity: 1;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  background: -webkit-linear-gradient(100deg, #9356dc 10%, #ff79da 100%);
+  background: -o-linear-gradient(100deg, #9356dc 10%, #ff79da 100%);
+  background: linear-gradient(-10deg, #9356dc 10%, #ff79da 100%);
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+  -webkit-transition: opacity 0.2s ease-in-out 0s;
+  -o-transition: opacity 0.2s ease-in-out 0s;
+  transition: opacity 0.2s ease-in-out 0s;
+}
+
+.button-cta:hover {
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
+}
+
+/*******************************************************************
+/*****************header pour le site "homyfood" ********************
+********************************************************************/
+.header nav .menu {
+  position: relative;
+  width: 100%;
+  height: 70px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .header nav .menu {
+    height: 120px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header nav .menu {
+    height: 160px;
+  }
+}
+
+.header nav .menu__lien-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: black;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .header nav .menu__lien-icon {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header nav .menu__lien-icon {
+    font-size: 60px;
+  }
+}
+
+.header nav .menu__lien-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header nav .menu__lien-logo__svg {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .header nav .menu__lien-logo__svg {
+    -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header nav .menu__lien-logo__svg {
+    -webkit-transform: scale(3);
+        -ms-transform: scale(3);
+            transform: scale(3);
+  }
+}
+
+/**************************************************************
+************ concerne le footer des pages "OHMYFOOD" **********
+***************************************************************/
+.footer {
+  width: 100%;
+  padding: 20px;
+  background-color: #404040;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer svg {
+  -webkit-transform: translateX(-40px) scale(0.6);
+      -ms-transform: translateX(-40px) scale(0.6);
+          transform: translateX(-40px) scale(0.6);
+  fill: white;
+}
+
+.footer .lien-svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 10px;
+}
+
+.footer .menu__li {
+  margin: 5px 0px;
+}
+
+.footer .menu__li__icon {
+  width: 16px;
+  height: 16px;
+}
+
+/**************************************************************************
+********concerne le style de la page ohmyfood-accueil-index.html **********
+**************************************************************************/
+/***** concerne la search-bar ******/
+.accueil .search-bar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #eaeaea;
+  -webkit-box-shadow: 0px -2px 2px 0px #c4c4c4;
+          box-shadow: 0px -2px 2px 0px #c4c4c4;
+}
+
+.accueil .search-bar__input {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 15px 0px;
+  border: none;
+  text-align: center;
+  background-color: transparent;
+}
+
+.accueil .search-bar__icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 30px;
+}
+
+/**************************************************************************
+********concerne le style de la page ohmyfood-accueil-index.html **********
+**************************************************************************/
+/**** section presentation *****/
+.accueil .presentation {
+  padding: 40px 20px 50px 20px;
+  background-color: #f6f6f6;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.accueil .presentation__text {
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .accueil .presentation__text {
+    font-size: 20px;
+  }
+}
+
+/**************************************************************************
+********concerne le style de la page ohmyfood-accueil-index.html **********
+**************************************************************************/
+/***** concerne le aside "Fonctionnement" ****/
+.accueil .fonctionnement {
+  padding: 50px 10px 50px 20px;
+}
+
+.accueil .container-btn-fonctionnement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .accueil .container-btn-fonctionnement {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.accueil .btn-fonctionnement {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  padding: 25px 25px 25px 0px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #f6f6f6;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .accueil .btn-fonctionnement {
+    padding: 0px;
+    width: 75%;
+    height: 80px;
+  }
+}
+
+.accueil .btn-fonctionnement:hover::before {
+  opacity: 0.1;
+}
+
+.accueil .btn-fonctionnement:hover .btn-fonctionnement__icon__icon-2 {
+  opacity: 1;
+}
+
+.accueil .btn-fonctionnement::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  padding: 25px 25px 25px 0px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #9356dc;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out 0s;
+  -o-transition: opacity 0.3s ease-in-out 0s;
+  transition: opacity 0.3s ease-in-out 0s;
+}
+
+.accueil .btn-fonctionnement__number {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 26px;
+          flex: 0 0 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  background-color: #9356dc;
+  border-radius: 100%;
+  margin-right: 10px;
+  position: relative;
+  left: -10px;
+}
+
+@media screen and (min-width: 768px) {
+  .accueil .btn-fonctionnement__number {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+    margin-right: 10%;
+    left: 0px;
+    padding-left: 20px;
+    height: 100%;
+    background: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0) 40%, #9356dc 40%);
+    background: -o-linear-gradient(135deg, rgba(255, 255, 255, 0) 40%, #9356dc 40%);
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0) 40%, #9356dc 40%);
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.accueil .btn-fonctionnement__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  position: relative;
+  color: darkgray;
+  font-size: 24px;
+  opacity: 1;
+  z-index: 5;
+  -webkit-transition: opacity 0.3s ease-in-out 0s;
+  -o-transition: opacity 0.3s ease-in-out 0s;
+  transition: opacity 0.3s ease-in-out 0s;
+}
+
+@media screen and (min-width: 768px) {
+  .accueil .btn-fonctionnement__icon {
+    font-size: 30px;
+    margin-right: 10%;
+  }
+}
+
+.accueil .btn-fonctionnement__icon__icon-2 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 6;
+  color: #9356dc;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out 0s;
+  -o-transition: opacity 0.3s ease-in-out 0s;
+  transition: opacity 0.3s ease-in-out 0s;
+}
+
+.accueil .btn-fonctionnement__text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  position: relative;
+  z-index: 5;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .accueil .btn-fonctionnement__text {
+    font-size: 20px;
+  }
+}
+
+/**************************************************************************
+********concerne le style de la page ohmyfood-accueil-index.html **********
+**************************************************************************/
+/************ concerne la section restaurant ***********/
+.accueil .restaurant {
+  padding: 50px 20px 50px 20px;
+  background-color: #f6f6f6;
+}
+
+.accueil .container-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .accueil .container-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    height: 600px;
+  }
+}
+
+.accueil .card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 2px 2px #f6f6f6;
+          box-shadow: 2px 2px 2px 2px #f6f6f6;
+  border-radius: 20px;
+  margin: 20px 0px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .accueil .card {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .accueil .card {
+    width: 40%;
+  }
+}
+
+.accueil .card .nouveau {
+  padding: 10px;
+  background-color: #99e2d0;
+  color: #137e62;
+  font-weight: 700;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.accueil .card__link {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 70%;
+          flex: 1 0 70%;
+}
+
+.accueil .card__link__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.accueil .card__info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.accueil .card__info__text {
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.accueil .card__info__text--bold {
+  font-weight: 700;
+}
+
+/*************************************************************************************
+***************** concerne la partie "main" des pages restaurant**********************
+**************************************************************************************/
+#page-restaurant {
+  /************************* section presentation *************************************
+    **************************************************************************************/
+  /*************************mobil first ***********************************************/
+  /***************************************************************************************/
+  /******* conteneur de l' image de presentation du restaurant******/
+}
+
+#page-restaurant .main-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#page-restaurant .presentation-restaurant {
+  width: 100%;
+  height: 300px;
+  /******* conteneur de l' image de presentation du restaurant**********/
+  /*************** image de presentation à disposition ***********/
+  /************** screen < 768px ********************************/
+}
+
+#page-restaurant .presentation-restaurant__img {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#page-restaurant .presentation-restaurant #la-palette {
+  background-image: url("../IMAGES/restaurants/img-300px/la-palette-du-gout-300px.png");
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #page-restaurant .presentation-restaurant #la-palette {
+    background-image: url("../IMAGES/restaurants/img-900px/la-palette-du-gout-900px.png");
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #page-restaurant .presentation-restaurant #la-palette {
+    background-image: url("../IMAGES/restaurants/img-full/la-palette-du-gout-full.jpg");
+  }
+}
+
+#page-restaurant .presentation-restaurant #le-delice {
+  background-image: url("../IMAGES/restaurants/img-300px/le-delice-des-sens-300px.png");
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #page-restaurant .presentation-restaurant #le-delice {
+    background-image: url("../IMAGES/restaurants/img-900px/le-delice-des-sens-900px.png");
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #page-restaurant .presentation-restaurant #le-delice {
+    background-image: url("../IMAGES/restaurants/img-full/le-delice-des-sens-full.jpg");
+  }
+}
+
+#page-restaurant .presentation-restaurant #la-note {
+  background-image: url("../IMAGES/restaurants/img-300px/la-note-enchantee-300px.png");
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #page-restaurant .presentation-restaurant #la-note {
+    background-image: url("../IMAGES/restaurants/img-900px/la-note-enchantee-900px.png");
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #page-restaurant .presentation-restaurant #la-note {
+    background-image: url("../IMAGES/restaurants/img-full/la-note-enchantee-full.jpg");
+  }
+}
+
+#page-restaurant .presentation-restaurant #la-francaise {
+  background-image: url("../IMAGES/restaurants/img-300px/a-la-francaise-300px.png");
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #page-restaurant .presentation-restaurant #la-francaise {
+    background-image: url("../IMAGES/restaurants/img-900px/a-la-francaise-900px.png");
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #page-restaurant .presentation-restaurant #la-francaise {
+    background-image: url("../IMAGES/restaurants/img-full/a-la-francaise-full.jpg");
+  }
+}
+
+/*************************************************************************************
+***************** concerne la partie "main" des pages restaurant**********************
+**************************************************************************************/
+/**** concerne la section "menu-restaurant"  ********/
+/****************************************************/
+#page-restaurant .container-menu {
+  margin-top: -40px;
+  width: 100%;
+  padding: 40px 0px;
+  background-color: #f6f6f6;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /****** conteneur qui contient les trois cartes (entree, plats, dessert) *****/
+  /*** carte-entree ***/
+  /*** carte-plat ***/
+  /*** carte-dessert ***/
+}
+
+#page-restaurant .container-menu__cont {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  #page-restaurant .container-menu__cont {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+#page-restaurant .container-menu__cont__titre {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 80%;
+          flex: 1 1 80%;
+  max-width: 80%;
+  font-size: 30px;
+  font-family: "Shrikhand", cursive;
+}
+
+@media screen and (min-width: 992px) {
+  #page-restaurant .container-menu__cont__titre {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+    max-width: 50%;
+    font-size: 40px;
+  }
+}
+
+#page-restaurant .container-menu .form {
+  width: 100%;
+  padding: 40px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#page-restaurant .container-menu .card-entree {
+  width: 100%;
+  padding: 0px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #page-restaurant .container-menu .card-entree {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #page-restaurant .container-menu .card-entree {
+    width: 60%;
+  }
+}
+
+#page-restaurant .container-menu .card-entree__titre {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+#page-restaurant .container-menu .card-entree__underline {
+  width: 50px;
+  margin-top: 6px;
+  height: 0px;
+  border: 2px solid #99e2d0;
+}
+
+#page-restaurant .container-menu .card-entree__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+#page-restaurant .container-menu .card-entree__label__info {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  max-width: 100%;
+  min-width: 80%;
+  height: 100%;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#page-restaurant .container-menu .card-entree__label__info__title {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#page-restaurant .container-menu .card-entree__label__info__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+}
+
+#page-restaurant .container-menu .card-entree__label__info__cont--weight {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  max-width: 80%;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: normal;
+}
+
+#page-restaurant .container-menu .card-entree__label__info__cont__price {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-width: 20%;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#page-restaurant .container-menu .card-entree__label__valid {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0%;
+          flex: 0 0 0%;
+  height: 100%;
+  background-color: #99e2d0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-box-flex 0.3s ease-in-out;
+  transition: -webkit-box-flex 0.3s ease-in-out;
+  -o-transition: flex 0.3s ease-in-out;
+  transition: flex 0.3s ease-in-out;
+  transition: flex 0.3s ease-in-out, -webkit-box-flex 0.3s ease-in-out, -ms-flex 0.3s ease-in-out;
+}
+
+#page-restaurant .container-menu .card-entree__label__valid__icon-check {
+  font-size: 25px;
+  color: white;
+  -webkit-transform: translateX(100px);
+      -ms-transform: translateX(100px);
+          transform: translateX(100px);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+#page-restaurant .container-menu .card-entree__checkbox {
+  display: none;
+}
+
+#page-restaurant .container-menu .card-entree__checkbox:checked + .card-entree__label > .card-entree__label__valid {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+}
+
+#page-restaurant .container-menu .card-entree__checkbox:checked + .card-entree__label
+> .card-entree__label__valid
+> .card-entree__label__valid__icon-check {
+  -webkit-transform: translateX(0px) rotateZ(1turn);
+      -ms-transform: translateX(0px) rotate(1turn);
+          transform: translateX(0px) rotateZ(1turn);
+}
+
+#page-restaurant .container-menu .card-plat {
+  width: 100%;
+  padding: 0px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #page-restaurant .container-menu .card-plat {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #page-restaurant .container-menu .card-plat {
+    width: 60%;
+  }
+}
+
+#page-restaurant .container-menu .card-plat__titre {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+#page-restaurant .container-menu .card-plat__underline {
+  width: 50px;
+  margin-top: 6px;
+  height: 0px;
+  border: 2px solid #99e2d0;
+}
+
+#page-restaurant .container-menu .card-plat__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+#page-restaurant .container-menu .card-plat__label__info {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  max-width: 100%;
+  min-width: 80%;
+  height: 100%;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#page-restaurant .container-menu .card-plat__label__info__title {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#page-restaurant .container-menu .card-plat__label__info__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+}
+
+#page-restaurant .container-menu .card-plat__label__info__cont--weight {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  max-width: 80%;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: normal;
+}
+
+#page-restaurant .container-menu .card-plat__label__info__cont__price {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-width: 20%;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#page-restaurant .container-menu .card-plat__label__valid {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0%;
+          flex: 0 0 0%;
+  height: 100%;
+  background-color: #99e2d0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-box-flex 0.3s ease-in-out;
+  transition: -webkit-box-flex 0.3s ease-in-out;
+  -o-transition: flex 0.3s ease-in-out;
+  transition: flex 0.3s ease-in-out;
+  transition: flex 0.3s ease-in-out, -webkit-box-flex 0.3s ease-in-out, -ms-flex 0.3s ease-in-out;
+}
+
+#page-restaurant .container-menu .card-plat__label__valid__icon-check {
+  font-size: 25px;
+  color: white;
+  -webkit-transform: translateX(100px);
+      -ms-transform: translateX(100px);
+          transform: translateX(100px);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+#page-restaurant .container-menu .card-plat__checkbox {
+  display: none;
+}
+
+#page-restaurant .container-menu .card-plat__checkbox:checked + .card-plat__label > .card-plat__label__valid {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+}
+
+#page-restaurant .container-menu .card-plat__checkbox:checked + .card-plat__label
+> .card-plat__label__valid
+> .card-plat__label__valid__icon-check {
+  -webkit-transform: translateX(0px) rotateZ(1turn);
+      -ms-transform: translateX(0px) rotate(1turn);
+          transform: translateX(0px) rotateZ(1turn);
+}
+
+#page-restaurant .container-menu .card-dessert {
+  width: 100%;
+  padding: 0px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #page-restaurant .container-menu .card-dessert {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #page-restaurant .container-menu .card-dessert {
+    width: 60%;
+  }
+}
+
+#page-restaurant .container-menu .card-dessert__titre {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+#page-restaurant .container-menu .card-dessert__underline {
+  width: 50px;
+  margin-top: 6px;
+  height: 0px;
+  border: 2px solid #99e2d0;
+}
+
+#page-restaurant .container-menu .card-dessert__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+#page-restaurant .container-menu .card-dessert__label__info {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  max-width: 100%;
+  min-width: 80%;
+  height: 100%;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#page-restaurant .container-menu .card-dessert__label__info__title {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#page-restaurant .container-menu .card-dessert__label__info__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+}
+
+#page-restaurant .container-menu .card-dessert__label__info__cont--weight {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  max-width: 80%;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: normal;
+}
+
+#page-restaurant .container-menu .card-dessert__label__info__cont__price {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-width: 20%;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#page-restaurant .container-menu .card-dessert__label__valid {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0%;
+          flex: 0 0 0%;
+  height: 100%;
+  background-color: #99e2d0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-box-flex 0.3s ease-in-out;
+  transition: -webkit-box-flex 0.3s ease-in-out;
+  -o-transition: flex 0.3s ease-in-out;
+  transition: flex 0.3s ease-in-out;
+  transition: flex 0.3s ease-in-out, -webkit-box-flex 0.3s ease-in-out, -ms-flex 0.3s ease-in-out;
+}
+
+#page-restaurant .container-menu .card-dessert__label__valid__icon-check {
+  font-size: 25px;
+  color: white;
+  -webkit-transform: translateX(100px);
+      -ms-transform: translateX(100px);
+          transform: translateX(100px);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+#page-restaurant .container-menu .card-dessert__checkbox {
+  display: none;
+}
+
+#page-restaurant .container-menu .card-dessert__checkbox:checked + .card-dessert__label > .card-dessert__label__valid {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+}
+
+#page-restaurant .container-menu .card-dessert__checkbox:checked + .card-dessert__label
+> .card-dessert__label__valid
+> .card-dessert__label__valid__icon-check {
+  -webkit-transform: translateX(0px) rotateZ(1turn);
+      -ms-transform: translateX(0px) rotate(1turn);
+          transform: translateX(0px) rotateZ(1turn);
+}
+
+/********************* concerne l' aniamation du spinner sur la page d' acceuil *************
+**********************************************************************************************/
+/********************** declaration des mixin *************************/
+/************************** definition des regles keyframes pour les animations **************/
+@-webkit-keyframes anim-global-sheet {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anim-global-sheet {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes anim-logo-small {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translate(-50%) scale(1);
+            transform: translate(-50%) scale(1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%) scale(1.5);
+            transform: translate(-50%) scale(1.5);
+  }
+}
+
+@keyframes anim-logo-small {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translate(-50%) scale(1);
+            transform: translate(-50%) scale(1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%) scale(1.5);
+            transform: translate(-50%) scale(1.5);
+  }
+}
+
+@-webkit-keyframes anim-logo-medium {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translate(-50%) scale(1.5);
+            transform: translate(-50%) scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%) scale(3);
+            transform: translate(-50%) scale(3);
+  }
+}
+
+@keyframes anim-logo-medium {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translate(-50%) scale(1.5);
+            transform: translate(-50%) scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%) scale(3);
+            transform: translate(-50%) scale(3);
+  }
+}
+
+@-webkit-keyframes anim-logo-large {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translate(-50%) scale(2);
+            transform: translate(-50%) scale(2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%) scale(5);
+            transform: translate(-50%) scale(5);
+  }
+}
+
+@keyframes anim-logo-large {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translate(-50%) scale(2);
+            transform: translate(-50%) scale(2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%) scale(5);
+            transform: translate(-50%) scale(5);
+  }
+}
+
+@-webkit-keyframes anim-ring {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+            transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(1turn);
+            transform: translateX(-50%) translateY(-50%) rotateZ(1turn);
+  }
+}
+
+@keyframes anim-ring {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+            transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(1turn);
+            transform: translateX(-50%) translateY(-50%) rotateZ(1turn);
+  }
+}
+
+@-webkit-keyframes anim-container {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -5;
+  }
+}
+
+@keyframes anim-container {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -5;
+  }
+}
+
+/***************************** proprietes communes aux elements *********************/
+.absolute-center {
+  position: absolute;
+  top: 50vw;
+  left: 50vw;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+/********************************* prorietes specifiques aux elements ****************/
+/** appliqué à l' element body **/
+.relative {
+  position: relative;
+}
+
+/** appliqué au conteneur de la page ,ameliore la transition  entre le spinner et le contenu de la page d' acceuil ***/
+.accueil {
+  -webkit-animation: anim-global-sheet 1s ease-in-out 2s 1 normal both;
+          animation: anim-global-sheet 1s ease-in-out 2s 1 normal both;
+}
+
+/*** conteneur general  de l' aniamation "loading-spinner" ***/
+.container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  height: 100vw;
+  width: 100vw;
+  background-color: white;
+  -webkit-animation: anim-container 3s ease-in-out 0s normal 1 both;
+          animation: anim-container 3s ease-in-out 0s normal 1 both;
+}
+
+/*** elements animés  ***/
+.ring {
+  width: 80vw;
+  height: 80vw;
+  border-radius: 100%;
+  border: 20px solid #9356dc;
+  border-right: 10px solid #ff79da;
+  border-top: 10px dotted #99e2d0;
+  -webkit-animation: anim-ring 1s ease-in-out 0s alternate 2 both;
+          animation: anim-ring 1s ease-in-out 0s alternate 2 both;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .ring {
+    width: 80vw;
+    height: 80vw;
+    border: 30px solid #9356dc;
+    border-right: 15px solid #ff79da;
+    border-top: 15px dotted #99e2d0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .ring {
+    width: 60vw;
+    height: 60vw;
+    border: 40px solid #9356dc;
+    border-right: 30px solid #ff79da;
+    border-top: 30px dotted #99e2d0;
+  }
+}
+
+/**** logo "homyfood.svg" ***/
+.cont-img-svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-animation: anim-logo-small 1s linear 0s alternate 2 both;
+          animation: anim-logo-small 1s linear 0s alternate 2 both;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .cont-img-svg {
+    -webkit-animation: anim-logo-medium 1s linear 0s alternate 2 both;
+            animation: anim-logo-medium 1s linear 0s alternate 2 both;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cont-img-svg {
+    -webkit-animation: anim-logo-large 1s linear 0s alternate 2 both;
+            animation: anim-logo-large 1s linear 0s alternate 2 both;
+  }
+}
+
+/*** text "loading" ***/
+.text {
+  top: 70vw;
+  font-size: 25px;
+  font-weight: 300;
+  color: #99e2d0;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .text {
+    top: 70vw;
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .text {
+    top: 65vw;
+    font-size: 80px;
+  }
+}
+
+/********************* concerne l' aniamation des cartes sur les pages "restaurant" *************
+**********************************************************************************************/
+/***** declaration des keyframe concernant l animation des cartes   ***********/
+@-webkit-keyframes display-card {
+  0% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes display-card {
+  0% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes display-food {
+  0% {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes display-food {
+  0% {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+#page-restaurant {
+  /* .animation-card-entree{
+
+        animation: display-card 0.2s ease 0s 1 normal backwards;
+
+    }
+
+    .animation-card-plat{
+
+        animation: display-card 0.2s ease 0.3s 1 normal backwards;
+
+    }
+
+    .animation-card-dessert{
+
+        animation: display-card 0.2s ease 0.4s 1 normal backwards;
+
+    }*/
+}
+
+#page-restaurant .animation-food-1 {
+  -webkit-animation: display-food 0.3s ease 0.2s 1 normal both;
+          animation: display-food 0.3s ease 0.2s 1 normal both;
+}
+
+#page-restaurant .animation-food-2 {
+  -webkit-animation: display-food 0.3s ease 0.3s 1 normal both;
+          animation: display-food 0.3s ease 0.3s 1 normal both;
+}
+
+#page-restaurant .animation-food-3 {
+  -webkit-animation: display-food 0.3s ease 0.4s 1 normal both;
+          animation: display-food 0.3s ease 0.4s 1 normal both;
+}
+
+#page-restaurant .animation-food-4 {
+  -webkit-animation: display-food 0.3s ease 0.5s 1 normal both;
+          animation: display-food 0.3s ease 0.5s 1 normal both;
+}
+
+/********************* concerne l' aniamation des coeurs-favoris page "accueil" et "retaurant" *************
+*****************************************************************************************************************/
+/**** page "accueil" ****/
+.accueil .cont-svg-heart {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.accueil .cont-svg-heart .svg-heart {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  fill: transparent;
+  stroke-width: 6px;
+  stroke: black;
+}
+
+.accueil .cont-svg-heart .svg-heart-bg {
+  stroke: none;
+  z-index: 1;
+  -webkit-transform-origin: 50% 90%;
+      -ms-transform-origin: 50% 90%;
+          transform-origin: 50% 90%;
+  -webkit-transform: scale(0.3);
+      -ms-transform: scale(0.3);
+          transform: scale(0.3);
+  opacity: 0;
+  -webkit-transition: opacity 0s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: opacity 0s ease 0s, -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s, opacity 0s ease 0s;
+  transition: transform 0.3s ease 0s, opacity 0s ease 0s;
+  transition: transform 0.3s ease 0s, opacity 0s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.accueil .cont-svg-heart:hover > .svg-heart-bg {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+/*** pages "restaurant" ***/
+#page-restaurant .cont-svg-heart {
+  position: relative;
+  height: 40px;
+  width: 40px;
+}
+
+#page-restaurant .cont-svg-heart .svg-heart {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  fill: transparent;
+  stroke-width: 6px;
+  stroke: black;
+}
+
+#page-restaurant .cont-svg-heart .svg-heart-bg {
+  stroke: none;
+  z-index: 1;
+  -webkit-transform-origin: 50% 90%;
+      -ms-transform-origin: 50% 90%;
+          transform-origin: 50% 90%;
+  -webkit-transform: scale(0.3);
+      -ms-transform: scale(0.3);
+          transform: scale(0.3);
+  opacity: 0;
+  -webkit-transition: opacity 0s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: opacity 0s ease 0s, -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s, opacity 0s ease 0s;
+  transition: transform 0.3s ease 0s, opacity 0s ease 0s;
+  transition: transform 0.3s ease 0s, opacity 0s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+#page-restaurant .cont-svg-heart:hover > .svg-heart-bg {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+/****** commu a toute les pages ******/
+#stop2 {
+  stop-color: #9356dc;
+}
+
+#stop1 {
+  stop-color: #ff79da;
+}
